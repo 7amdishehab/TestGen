@@ -6,12 +6,19 @@ type SidebarNavItemProps = {
     to: string
     icon: ReactNode
     label: string
+    onNavigate?: () => void
 }
 
-export function SidebarNavItem({ to, icon, label }: SidebarNavItemProps) {
+export function SidebarNavItem({
+    to,
+    icon,
+    label,
+    onNavigate,
+}: SidebarNavItemProps) {
     return (
         <NavLink
             to={to}
+            onClick={onNavigate}
             className={({ isActive }) =>
                 cn(
                     'flex items-center gap-3 rounded-[10px] px-3 py-2 text-sm text-(--landing-muted) transition-colors',

@@ -4,12 +4,14 @@ import { DataTable } from '../../shared/components/DataTable'
 import { IconButton } from '../../shared/components/IconButton'
 import { PageHeader } from '../../shared/components/PageHeader'
 import { ToggleSwitch } from '../../shared/components/ToggleSwitch'
+import { Badge } from '../../../landing/components/Badge'
 import { Button } from '../../../landing/components/Button'
 import { LuBookOpen, LuFileDown, LuRotateCcw } from 'react-icons/lu'
 import { FaJira } from 'react-icons/fa'
 import { FiFileText } from 'react-icons/fi'
 import { RiFileExcel2Line } from 'react-icons/ri'
 import { useState } from 'react'
+import { VscAzure } from 'react-icons/vsc'
 
 type RecentActivityRow = {
     id: string
@@ -160,16 +162,17 @@ export function ExportPage() {
                 </h2>
                 <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
                     <AppCard className="flex flex-col justify-between gap-8">
-                        <div className="flex items-start justify-between">
-                            <div className="flex items-center gap-4">
-                                <div className="flex h-10 w-10 items-center justify-center rounded-[12px] bg-blue-500/10 text-blue-400">
-                                    <FaJira size={18} aria-hidden="true" />
+                        <div className="flex items-start justify-between gap-6">
+                            <div className="flex min-w-0 flex-col gap-4">
+                                <div className="flex h-11 w-11 items-center justify-center rounded-[12px] border border-(--landing-border) bg-white text-blue-600">
+                                    <FaJira size={20} aria-hidden="true" />
                                 </div>
-                                <div>
+
+                                <div className="min-w-0">
                                     <div className="text-sm font-semibold text-(--landing-text)">
                                         Atlassian Jira
                                     </div>
-                                    <p className="mt-1 text-xs text-(--landing-muted)">
+                                    <p className="mt-2 text-xs leading-relaxed text-(--landing-muted)">
                                         Sync generated test cases directly to
                                         Jira projects as tickets. Supports
                                         custom fields mapping.
@@ -177,13 +180,15 @@ export function ExportPage() {
                                 </div>
                             </div>
 
-                            <AppBadge variant="info">Connected</AppBadge>
+                            <Badge className="border-cyan-400/25 bg-cyan-400/10 px-3 py-1 text-[11px] font-semibold text-cyan-300 [&>span]:hidden">
+                                Connected
+                            </Badge>
                         </div>
 
                         <div className="flex items-center justify-between">
                             <button
                                 type="button"
-                                className="text-xs text-(--landing-subtle) hover:text-(--landing-text)"
+                                className="text-xs text-(--landing-subtle) underline-offset-4 hover:text-(--landing-text) hover:underline"
                             >
                                 Configure Settings
                             </button>
@@ -195,21 +200,22 @@ export function ExportPage() {
                     </AppCard>
 
                     <AppCard className="flex flex-col justify-between gap-8">
-                        <div className="flex items-start justify-between">
-                            <div className="flex items-center gap-4">
-                                <div className="flex h-10 w-10 items-center justify-center rounded-[12px] bg-sky-500/10 text-sky-300">
+                        <div className="flex items-start justify-between gap-6">
+                            <div className="flex min-w-0 flex-col gap-4">
+                                <div className="flex h-11 w-11 items-center justify-center rounded-[12px] border border-(--landing-border) bg-white">
                                     <span
-                                        className="text-sm font-bold"
+                                        className="text-sm font-bold text-blue-600"
                                         aria-hidden="true"
                                     >
-                                        ◆
+                                        <VscAzure size={20} />
                                     </span>
                                 </div>
-                                <div>
+
+                                <div className="min-w-0">
                                     <div className="text-sm font-semibold text-(--landing-text)">
                                         Azure DevOps
                                     </div>
-                                    <p className="mt-1 text-xs text-(--landing-muted)">
+                                    <p className="mt-2 text-xs leading-relaxed text-(--landing-muted)">
                                         Push test plans to Azure Boards and link
                                         with work items. Enable bi-directional
                                         status syncing.
@@ -217,7 +223,9 @@ export function ExportPage() {
                                 </div>
                             </div>
 
-                            <AppBadge>Not Connected</AppBadge>
+                            <Badge className="min-w-fit border-(--landing-border) bg-(--landing-background)/20 px-3 py-1 text-[11px] font-semibold text-(--landing-subtle) [&>span]:hidden">
+                                Not Connected
+                            </Badge>
                         </div>
 
                         <div className="flex justify-end">

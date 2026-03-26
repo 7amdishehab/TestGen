@@ -11,7 +11,8 @@ import { SignUpPage } from '../pages/auth/SignUpPage'
 import { DashboardPage } from '../pages/app/DashboardPage'
 import { ExportPage } from '../pages/app/ExportPage'
 import { HomePage } from '../pages/app/HomePage'
-import { HowItWorksPage } from '../pages/app/HowItWorksPage'
+import { HowItWorksPage } from '../features/landing/pages/HowItWorksPage'
+import { SettingsPage } from '../pages/app/SettingsPage'
 import { UploadRequirementsPage } from '../pages/app/UploadRequirementsPage'
 
 export function AppRouter() {
@@ -48,6 +49,7 @@ export function AppRouter() {
                         element={<DashboardPage />}
                     />
                     <Route path={ROUTES.export} element={<ExportPage />} />
+                    <Route path={ROUTES.settings} element={<SettingsPage />} />
                     <Route
                         path={ROUTES.uploadRequirements}
                         element={<UploadRequirementsPage />}

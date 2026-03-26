@@ -4,7 +4,8 @@ import { DataTable } from '../../shared/components/DataTable'
 import { IconButton } from '../../shared/components/IconButton'
 import { PageHeader } from '../../shared/components/PageHeader'
 import { Button } from '../../../landing/components/Button'
-import { LuBell, LuCalendarDays, LuDownload } from 'react-icons/lu'
+import { ROUTES } from '../../../../constants/routes'
+import { LuBell, LuCalendarDays, LuDownload, LuHouse } from 'react-icons/lu'
 
 type RecentGenerationRow = {
     id: string
@@ -59,7 +60,11 @@ export function DashboardPage() {
                 right={
                     <>
                         <div className="hidden items-center gap-2 rounded-[12px] border border-(--landing-border) bg-(--landing-card) px-4 py-2 text-sm text-(--landing-muted) md:flex">
-                            <LuCalendarDays size={16} aria-hidden="true" />
+                            <LuCalendarDays
+                                size={16}
+                                aria-hidden="true"
+                                className="text-(--landing-primary)"
+                            />
                             <span>Feb 24, 2026</span>
                         </div>
                         <div className="hidden items-center gap-2 rounded-[12px] border border-(--landing-border) bg-(--landing-card) px-4 py-2 text-sm text-(--landing-muted) md:flex">
@@ -68,7 +73,7 @@ export function DashboardPage() {
                         <Button
                             variant="secondary"
                             size="sm"
-                            className="hidden md:inline-flex"
+                            className="hidden border-(--landing-primary) bg-transparent text-(--landing-primary) hover:bg-(--landing-primary)/10 md:inline-flex"
                             leftIcon={<LuDownload size={16} />}
                         >
                             Export Report
