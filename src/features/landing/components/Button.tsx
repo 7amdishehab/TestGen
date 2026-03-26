@@ -52,7 +52,7 @@ const variantClasses: Record<ButtonVariant, string> = {
     primary:
         'bg-(--landing-primary) text-(--landing-background) hover:brightness-110',
     secondary:
-        'border border-[#374151] bg-[#1C212B] text-(--landing-muted)  hover:text-(--landing-primary)',
+        'border border-(--landing-secondary-border) bg-(--landing-secondary-bg) text-(--landing-muted) hover:text-(--landing-primary)',
     ghost: 'bg-transparent text-(--landing-text) hover:underline',
 }
 

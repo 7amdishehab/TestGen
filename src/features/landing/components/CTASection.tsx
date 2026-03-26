@@ -5,6 +5,7 @@ import { SectionWrapper } from './SectionWrapper'
 export function CTASection() {
     return (
         <SectionWrapper
+            withTopBorder
             title="Ready to Automate Your Testing?"
             subtitle="Get started with AI-powered test case generation today."
         >

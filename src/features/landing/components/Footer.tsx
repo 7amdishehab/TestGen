@@ -21,7 +21,7 @@ export function Footer() {
                         to={ROUTES.home}
                         className="hover:text-(--landing-text)"
                     >
-                        Features
+                        Home
                     </Link>
                     <Link
                         to={ROUTES.howItWorks}
@@ -35,9 +35,12 @@ export function Footer() {
                     >
                         Dashboard
                     </Link>
-                    <a href="#" className="hover:text-(--landing-text)">
-                        Support
-                    </a>
+                    <Link
+                        to={ROUTES.signIn}
+                        className="hover:text-(--landing-text)"
+                    >
+                        Login
+                    </Link>
                 </nav>
 
                 <div className="flex items-center justify-center gap-4 text-(--landing-muted)">

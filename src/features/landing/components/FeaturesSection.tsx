@@ -7,6 +7,7 @@ import { IoLinkSharp } from 'react-icons/io5'
 export function FeaturesSection() {
     return (
         <SectionWrapper
+            withTopBorder
             title="Everything You Need"
             subtitle="Powerful features designed to streamline your quality assurance workflow"
         >

@@ -19,11 +19,14 @@
     /* Landing tokens (kept separate from auth tokens) */
     --landing-primary: #00d4aa;
     --landing-background: #0b0e14;
-    --landing-card: #13161d;
+    /* --landing-card: #13161d; */
+    --landing-card: #151b23;
     --landing-border: #1f293780;
     --landing-text: #ffffff;
     --landing-muted: #9ca3af;
     --landing-subtle: #6b7280;
+    --landing-secondary-border: #374151;
+    --landing-secondary-bg: #1c212b;
     --landing-navbar-bg: rgba(11, 14, 20, 0.7);
     --landing-shadow: 0px 0px 15px 0px #06b6d426;
 }

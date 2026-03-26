@@ -7,6 +7,7 @@ import { LuDownload } from 'react-icons/lu'
 export function ProcessSection() {
     return (
         <SectionWrapper
+            withTopBorder
             title="Simple Three-Step Process"
             subtitle="Get from requirements to comprehensive test coverage in minutes"
         >
