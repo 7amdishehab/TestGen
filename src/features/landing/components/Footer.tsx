@@ -1,12 +1,21 @@
 import { Link } from 'react-router-dom'
+import { motion, useReducedMotion } from 'framer-motion'
 import { ROUTES } from '../../../constants/routes'
 import { Container } from './Container'
 import Logo from './Logo'
 import { LuGithub, LuLinkedin, LuTwitter } from 'react-icons/lu'
 
 export function Footer() {
+    const shouldReduceMotion = useReducedMotion()
+
     return (
-        <footer className="border-t border-(--landing-border) py-10">
+        <motion.footer
+            initial={shouldReduceMotion ? undefined : { opacity: 0, y: 18 }}
+            whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            className="border-t border-(--landing-border) py-10"
+        >
             <Container className="flex flex-col items-center gap-8 md:flex-row md:justify-between">
                 <Link
                     to={ROUTES.home}
@@ -49,24 +58,45 @@ export function Footer() {
                         aria-label="Twitter"
                         className="hover:text-(--landing-primary)"
                     >
-                        <LuTwitter size={20} aria-hidden="true" />
+                        <motion.span
+                            whileHover={
+                                shouldReduceMotion ? undefined : { y: -2 }
+                            }
+                            className="inline-flex"
+                        >
+                            <LuTwitter size={20} aria-hidden="true" />
+                        </motion.span>
                     </a>
                     <a
                         href="#"
                         aria-label="GitHub"
                         className="hover:text-(--landing-primary)"
                     >
-                        <LuGithub size={20} aria-hidden="true" />
+                        <motion.span
+                            whileHover={
+                                shouldReduceMotion ? undefined : { y: -2 }
+                            }
+                            className="inline-flex"
+                        >
+                            <LuGithub size={20} aria-hidden="true" />
+                        </motion.span>
                     </a>
                     <a
                         href="#"
                         aria-label="LinkedIn"
                         className="hover:text-(--landing-primary)"
                     >
-                        <LuLinkedin size={20} aria-hidden="true" />
+                        <motion.span
+                            whileHover={
+                                shouldReduceMotion ? undefined : { y: -2 }
+                            }
+                            className="inline-flex"
+                        >
+                            <LuLinkedin size={20} aria-hidden="true" />
+                        </motion.span>
                     </a>
                 </div>
             </Container>
-        </footer>
+        </motion.footer>
     )
 }

@@ -15,36 +15,42 @@ import { WorkflowStepCard } from '../components/WorkflowStepCard'
 import { SectionWrapper } from '../components/SectionWrapper'
 import { BsStars } from 'react-icons/bs'
 import { RxCode } from 'react-icons/rx'
+import { MotionReveal } from '../components/MotionReveal'
 
 export function HowItWorksPage() {
     return (
         <>
             <section className="pt-28 pb-10 sm:pt-32 sm:pb-20">
                 <Container className="flex flex-col gap-10">
-                    <div className="mx-auto flex w-full max-w-4xl flex-col items-center gap-10 text-center">
-                        <Badge>WORKFLOW</Badge>
+                    <MotionReveal>
+                        <div className="mx-auto flex w-full max-w-4xl flex-col items-center gap-10 text-center">
+                            <Badge>WORKFLOW</Badge>
 
-                        <div className="flex flex-col gap-4">
-                            <h1 className="text-[42px] leading-[1.05] font-bold text-(--landing-text) sm:text-[60px]">
-                                From Requirements to Results in{' '}
-                                <span className="text-(--landing-primary)">
-                                    Seconds
-                                </span>
-                            </h1>
-                            <p className="max-w-3xl text-base text-(--landing-muted) sm:text-lg">
-                                See how our AI engine transforms your static
-                                documentation into executable test coverage
-                                through intelligent analysis and automated
-                                generation.
-                            </p>
+                            <div className="flex flex-col gap-4">
+                                <h1 className="text-[42px] leading-[1.05] font-bold text-(--landing-text) sm:text-[60px]">
+                                    From Requirements to Results in{' '}
+                                    <span className="text-(--landing-primary)">
+                                        Seconds
+                                    </span>
+                                </h1>
+                                <p className="max-w-3xl text-base text-(--landing-muted) sm:text-lg">
+                                    See how our AI engine transforms your static
+                                    documentation into executable test coverage
+                                    through intelligent analysis and automated
+                                    generation.
+                                </p>
+                            </div>
                         </div>
-                    </div>
+                    </MotionReveal>
 
-                    <div className="mx-auto w-full max-w-5xl">
+                    <MotionReveal
+                        className="mx-auto w-full max-w-5xl"
+                        delay={0.08}
+                    >
                         <div className="flex flex-col gap-10">
                             <div className="relative hidden w-full items-center md:flex">
                                 <div className="absolute top-1/2 right-0 left-0 mr-24 -translate-y-1/2">
-                                    <div className="h-px w-full bg-gradient-to-r from-(--landing-primary) via-(--landing-primary)/40 to-transparent" />
+                                    <div className="h-px w-full bg-linear-to-r from-(--landing-primary) via-(--landing-primary)/40 to-transparent" />
                                 </div>
 
                                 <div className="relative grid w-full grid-cols-4 items-center">
@@ -106,7 +112,7 @@ export function HowItWorksPage() {
                                 />
                             </div>
                         </div>
-                    </div>
+                    </MotionReveal>
                 </Container>
             </section>
 
@@ -115,14 +121,14 @@ export function HowItWorksPage() {
                 title="Under the Hood"
                 subtitle="A visualization of our intelligent processing pipeline"
             >
-                <div className="mx-auto w-full max-w-5xl">
+                <MotionReveal className="mx-auto w-full max-w-5xl" delay={0.06}>
                     <img
                         src="/how%20it%20works.png"
                         alt="How it works overview"
                         className="h-auto"
                         loading="lazy"
                     />
-                </div>
+                </MotionReveal>
             </SectionWrapper>
 
             <SectionWrapper withTopBorder>

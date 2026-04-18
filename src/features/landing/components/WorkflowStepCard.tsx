@@ -1,3 +1,5 @@
+import { motion, useReducedMotion } from 'framer-motion'
+
 type WorkflowStepCardProps = {
     stepLabel: string
     title: string
@@ -9,8 +11,17 @@ export function WorkflowStepCard({
     title,
     description,
 }: WorkflowStepCardProps) {
+    const shouldReduceMotion = useReducedMotion()
+
     return (
-        <article className="flex flex-col gap-3 rounded-[12px] border border-(--landing-border) bg-(--landing-card) p-6">
+        <motion.article
+            initial={shouldReduceMotion ? undefined : { opacity: 0, y: 20 }}
+            whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
+            whileHover={shouldReduceMotion ? undefined : { y: -2 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.48, ease: [0.22, 1, 0.36, 1] }}
+            className="flex flex-col gap-3 rounded-[12px] border border-(--landing-border) bg-(--landing-card) p-6"
+        >
             <p className="text-xs font-semibold tracking-wide text-(--landing-primary)">
                 {stepLabel}
             </p>
@@ -20,6 +31,6 @@ export function WorkflowStepCard({
             <p className="text-sm leading-relaxed text-(--landing-muted)">
                 {description}
             </p>
-        </article>
+        </motion.article>
     )
 }

@@ -1,4 +1,5 @@
-import { Outlet } from 'react-router-dom'
+import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
+import { Outlet, useLocation } from 'react-router-dom'
 import { useState } from 'react'
 import { Sidebar } from '../features/app/shared/components/Sidebar'
 import { IconButton } from '../features/app/shared/components/IconButton'
@@ -6,6 +7,8 @@ import { LuMenu } from 'react-icons/lu'
 
 export function DashboardLayout() {
     const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false)
+    const location = useLocation()
+    const shouldReduceMotion = useReducedMotion()
 
     return (
         <div className="min-h-screen bg-(--landing-background) text-(--landing-text)">
@@ -26,7 +29,32 @@ export function DashboardLayout() {
                             <div />
                         </div>
                     </div>
-                    <Outlet />
+                    <AnimatePresence mode="wait">
+                        <motion.div
+                            key={location.pathname}
+                            initial={
+                                shouldReduceMotion
+                                    ? undefined
+                                    : { opacity: 0, x: 10 }
+                            }
+                            animate={
+                                shouldReduceMotion
+                                    ? undefined
+                                    : { opacity: 1, x: 0 }
+                            }
+                            exit={
+                                shouldReduceMotion
+                                    ? undefined
+                                    : { opacity: 0, x: -10 }
+                            }
+                            transition={{
+                                duration: 0.3,
+                                ease: [0.22, 1, 0.36, 1],
+                            }}
+                        >
+                            <Outlet />
+                        </motion.div>
+                    </AnimatePresence>
                 </main>
             </div>
         </div>

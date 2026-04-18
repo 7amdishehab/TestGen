@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+import { motion, useReducedMotion } from 'framer-motion'
 
 type ProcessStepProps = {
     step: number
@@ -13,8 +14,17 @@ export function ProcessStep({
     description,
     icon,
 }: ProcessStepProps) {
+    const shouldReduceMotion = useReducedMotion()
+
     return (
-        <article className="flex flex-col items-center gap-5 text-center">
+        <motion.article
+            initial={shouldReduceMotion ? undefined : { opacity: 0, y: 18 }}
+            whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
+            whileHover={shouldReduceMotion ? undefined : { y: -2 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.48, ease: [0.22, 1, 0.36, 1] }}
+            className="flex flex-col items-center gap-5 text-center"
+        >
             <div className="flex size-12 items-center justify-center rounded-full border-2 border-(--landing-primary)/30 bg-(--landing-background) text-lg text-(--landing-primary) shadow-(--landing-shadow)">
                 {step}
             </div>
@@ -25,6 +35,6 @@ export function ProcessStep({
                 {title}
             </h3>
             <p className="text-sm text-(--landing-muted)">{description}</p>
-        </article>
+        </motion.article>
     )
 }
