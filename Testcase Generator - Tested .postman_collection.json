@@ -1,0 +1,3157 @@
+{
+  "info": {
+    "_postman_id": "6ec7c168-84ce-4ce3-8a42-bd53c6bcdb66",
+    "name": "Testcase Generator - API Gateway",
+    "description": "All requests go through gatewayserver. Import this collection into Postman and run Auth > Sign In first to save the bearer token.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "47696670",
+    "_collection_link": "https://go.postman.co/collection/47696670-6ec7c168-84ce-4ce3-8a42-bd53c6bcdb66?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Sign Up",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"hamdishehab\",\n  \"email\": \"hamdishehab@gmail.com\",\n  \"password\": \"00\"\n}"
+            },
+            "url": {
+              "raw": "{{gatewayBaseUrl}}/testcasegenerator/auth/api/auth/signup",
+              "host": [
+                "{{gatewayBaseUrl}}"
+              ],
+              "path": [
+                "testcasegenerator",
+                "auth",
+                "api",
+                "auth",
+                "signup"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Sign Up",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"username\": \"7amdishehab\",\n  \"email\": \"7amdishehab@gmail.com\",\n  \"password\": \"00000000\"\n}"
+                },
+                "url": {
+                  "raw": "{{gatewayBaseUrl}}/testcasegenerator/auth/api/auth/signup",
+                  "host": [
+                    "{{gatewayBaseUrl}}"
+                  ],
+                  "path": [
+                    "testcasegenerator",
+                    "auth",
+                    "api",
+                    "auth",
+                    "signup"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Method"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Headers"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Method"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Headers"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain;charset=UTF-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "19"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 26 May 2026 12:35:31 GMT"
+                },
+                {
+                  "key": "X-Response-Time",
+                  "value": "2026-05-26T12:34:45.733343973"
+                }
+              ],
+              "cookie": [],
+              "body": "this email is found"
+            },
+            {
+              "name": "Sign Up",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"username\": \"hamdishehab\",\n  \"email\": \"hamdishehab@gmail.com\",\n  \"password\": \"00000000\"\n}"
+                },
+                "url": {
+                  "raw": "{{gatewayBaseUrl}}/testcasegenerator/auth/api/auth/signup",
+                  "host": [
+                    "{{gatewayBaseUrl}}"
+                  ],
+                  "path": [
+                    "testcasegenerator",
+                    "auth",
+                    "api",
+                    "auth",
+                    "signup"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Method"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Headers"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Method"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Headers"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain;charset=UTF-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "23"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 26 May 2026 12:35:49 GMT"
+                },
+                {
+                  "key": "X-Response-Time",
+                  "value": "2026-05-26T12:34:45.733343973"
+                }
+              ],
+              "cookie": [],
+              "body": "User added successfully"
+            }
+          ]
+        },
+        {
+          "name": "Sign In",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Sign in succeeded', function () {",
+                  "  pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "const body = pm.response.json();",
+                  "if (body.token) {",
+                  "  pm.collectionVariables.set('token', body.token);",
+                  "}",
+                  "if (body.userId) {",
+                  "  pm.collectionVariables.set('userId', String(body.userId));",
+                  "}",
+                  "if (body.email) {",
+                  "  pm.collectionVariables.set('email', body.email);",
+                  "}"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [
+                  ""
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"7amdishehab@gmail.com\",\n  \"password\": \"00000000\"\n}"
+            },
+            "url": {
+              "raw": "{{gatewayBaseUrl}}/testcasegenerator/auth/api/auth/signin",
+              "host": [
+                "{{gatewayBaseUrl}}"
+              ],
+              "path": [
+                "testcasegenerator",
+                "auth",
+                "api",
+                "auth",
+                "signin"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Sign In",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"email\": \"7amdishehab@gmail.com\",\n  \"password\": \"00000000\"\n}"
+                },
+                "url": {
+                  "raw": "{{gatewayBaseUrl}}/testcasegenerator/auth/api/auth/signin",
+                  "host": [
+                    "{{gatewayBaseUrl}}"
+                  ],
+                  "path": [
+                    "testcasegenerator",
+                    "auth",
+                    "api",
+                    "auth",
+                    "signin"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "transfer-encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Method"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Headers"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Method"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Headers"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 26 May 2026 12:36:08 GMT"
+                },
+                {
+                  "key": "X-Response-Time",
+                  "value": "2026-05-26T12:34:45.733343973"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"email\": \"7amdishehab@gmail.com\",\n    \"role\": \"CUSTOMER\",\n    \"token\": \"eyJhbGciOiJIUzM4NCJ9.eyJyb2xlIjoiQ1VTVE9NRVIiLCJ1c2VySWQiOjEsImVtYWlsIjoiN2FtZGlzaGVoYWJAZ21haWwuY29tIiwic3ViIjoiN2FtZGlzaGVoYWJAZ21haWwuY29tIiwiaWF0IjoxNzc5Nzk4OTY4LCJleHAiOjE3Nzk3OTk1Njh9.ma5zXB1xN1sHQAGie45a9CW9gYhavSIdUbFLc__r3U8KJC4Y-xdLua8FqOrEWTIb\",\n    \"userId\": 1\n}"
+            },
+            {
+              "name": "Sign In",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"email\": \"7amdfishehab@gmail.com\",\n  \"password\": \"00000000\"\n}"
+                },
+                "url": {
+                  "raw": "{{gatewayBaseUrl}}/testcasegenerator/auth/api/auth/signin",
+                  "host": [
+                    "{{gatewayBaseUrl}}"
+                  ],
+                  "path": [
+                    "testcasegenerator",
+                    "auth",
+                    "api",
+                    "auth",
+                    "signin"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Method"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Headers"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Method"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Headers"
+                },
+                {
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "X-XSS-Protection",
+                  "value": "0"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, no-store, max-age=0, must-revalidate"
+                },
+                {
+                  "key": "Pragma",
+                  "value": "no-cache"
+                },
+                {
+                  "key": "Expires",
+                  "value": "0"
+                },
+                {
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain;charset=UTF-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "16"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 26 May 2026 12:36:26 GMT"
+                },
+                {
+                  "key": "X-Response-Time",
+                  "value": "2026-05-26T12:34:45.733343973"
+                }
+              ],
+              "cookie": [],
+              "body": "failed to signin"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Projects",
+      "item": [
+        {
+          "name": "Create Project",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"3otor Project\",\n  \"description\": \"Ecommerce project for generating and managing test cases\"\n}"
+            },
+            "url": {
+              "raw": "{{gatewayBaseUrl}}/testcasegenerator/projects/api/create",
+              "host": [
+                "{{gatewayBaseUrl}}"
+              ],
+              "path": [
+                "testcasegenerator",
+                "projects",
+                "api",
+                "create"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Create Project",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"3otor Project\",\n  \"description\": \"Ecommerce project for generating and managing test cases\"\n}"
+                },
+                "url": {
+                  "raw": "{{gatewayBaseUrl}}/testcasegenerator/projects/api/create",
+                  "host": [
+                    "{{gatewayBaseUrl}}"
+                  ],
+                  "path": [
+                    "testcasegenerator",
+                    "projects",
+                    "api",
+                    "create"
+                  ]
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Method"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Headers"
+                },
+                {
+                  "key": "content-length",
+                  "value": "0"
+                }
+              ],
+              "cookie": [],
+              "body": null
+            },
+            {
+              "name": "Create Project",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"3otor Project\",\n  \"description\": \"Ecommerce project for generating and managing test cases\"\n}"
+                },
+                "url": {
+                  "raw": "{{gatewayBaseUrl}}/testcasegenerator/projects/api/create",
+                  "host": [
+                    "{{gatewayBaseUrl}}"
+                  ],
+                  "path": [
+                    "testcasegenerator",
+                    "projects",
+                    "api",
+                    "create"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "transfer-encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Method"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Headers"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "9"
+                },
+                {
+                  "key": "X-RateLimit-Requested-Tokens",
+                  "value": "1"
+                },
+                {
+                  "key": "X-RateLimit-Burst-Capacity",
+                  "value": "10"
+                },
+                {
+                  "key": "X-RateLimit-Replenish-Rate",
+                  "value": "5"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 26 May 2026 12:38:05 GMT"
+                },
+                {
+                  "key": "X-Response-Time",
+                  "value": "2026-05-26T12:34:46.002627040"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"statusCode\": \"201\",\n    \"statusMsg\": \"Project created successfully\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Fetch Project",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{gatewayBaseUrl}}/testcasegenerator/projects/api/fetch/{{projectId}}",
+              "host": [
+                "{{gatewayBaseUrl}}"
+              ],
+              "path": [
+                "testcasegenerator",
+                "projects",
+                "api",
+                "fetch",
+                "{{projectId}}"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Fetch Project",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{gatewayBaseUrl}}/testcasegenerator/projects/api/fetch/{{projectId}}",
+                  "host": [
+                    "{{gatewayBaseUrl}}"
+                  ],
+                  "path": [
+                    "testcasegenerator",
+                    "projects",
+                    "api",
+                    "fetch",
+                    "{{projectId}}"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "transfer-encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Method"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Headers"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "9"
+                },
+                {
+                  "key": "X-RateLimit-Requested-Tokens",
+                  "value": "1"
+                },
+                {
+                  "key": "X-RateLimit-Burst-Capacity",
+                  "value": "10"
+                },
+                {
+                  "key": "X-RateLimit-Replenish-Rate",
+                  "value": "5"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 26 May 2026 12:38:16 GMT"
+                },
+                {
+                  "key": "X-Response-Time",
+                  "value": "2026-05-26T12:34:46.002627040"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"createdAt\": \"2026-05-25T15:24:41.603118\",\n    \"description\": \"Ecommerce project for generating and managing test cases\",\n    \"id\": 1,\n    \"lastModifiedAt\": null,\n    \"name\": \"Ecommerce Project\"\n}"
+            },
+            {
+              "name": "Fetch Project",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{gatewayBaseUrl}}/testcasegenerator/projects/api/fetch/44",
+                  "host": [
+                    "{{gatewayBaseUrl}}"
+                  ],
+                  "path": [
+                    "testcasegenerator",
+                    "projects",
+                    "api",
+                    "fetch",
+                    "44"
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "transfer-encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Method"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Headers"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "9"
+                },
+                {
+                  "key": "X-RateLimit-Requested-Tokens",
+                  "value": "1"
+                },
+                {
+                  "key": "X-RateLimit-Burst-Capacity",
+                  "value": "10"
+                },
+                {
+                  "key": "X-RateLimit-Replenish-Rate",
+                  "value": "5"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 26 May 2026 12:38:31 GMT"
+                },
+                {
+                  "key": "X-Response-Time",
+                  "value": "2026-05-26T12:34:46.002627040"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"apiPath\": \"/api/fetch/44\",\n    \"errorCode\": \"404 NOT_FOUND\",\n    \"errorMessage\": \"project with id 44not found\",\n    \"errorTime\": \"2026-05-26T12:38:31.662175537\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Fetch All Projects",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "const body = pm.response.json();",
+                  "if (Array.isArray(body) && body.length && body[0].id) {",
+                  "  pm.collectionVariables.set('projectId', String(body[0].id));",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{gatewayBaseUrl}}/testcasegenerator/projects/api/fetch-all",
+              "host": [
+                "{{gatewayBaseUrl}}"
+              ],
+              "path": [
+                "testcasegenerator",
+                "projects",
+                "api",
+                "fetch-all"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Fetch All Projects",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{gatewayBaseUrl}}/testcasegenerator/projects/api/fetch-all",
+                  "host": [
+                    "{{gatewayBaseUrl}}"
+                  ],
+                  "path": [
+                    "testcasegenerator",
+                    "projects",
+                    "api",
+                    "fetch-all"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "transfer-encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Method"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Headers"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "9"
+                },
+                {
+                  "key": "X-RateLimit-Requested-Tokens",
+                  "value": "1"
+                },
+                {
+                  "key": "X-RateLimit-Burst-Capacity",
+                  "value": "10"
+                },
+                {
+                  "key": "X-RateLimit-Replenish-Rate",
+                  "value": "5"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 26 May 2026 12:38:44 GMT"
+                },
+                {
+                  "key": "X-Response-Time",
+                  "value": "2026-05-26T12:34:46.002627040"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"createdAt\": \"2026-05-25T15:24:41.603118\",\n        \"description\": \"Ecommerce project for generating and managing test cases\",\n        \"id\": 1,\n        \"lastModifiedAt\": null,\n        \"name\": \"Ecommerce Project\"\n    },\n    {\n        \"createdAt\": \"2026-05-25T15:28:32.411192\",\n        \"description\": \"Ecommerce project for generating and managing test cases\",\n        \"id\": 2,\n        \"lastModifiedAt\": null,\n        \"name\": \"Ecommerceee Project\"\n    },\n    {\n        \"createdAt\": \"2026-05-26T12:38:05.193415\",\n        \"description\": \"Ecommerce project for generating and managing test cases\",\n        \"id\": 3,\n        \"lastModifiedAt\": null,\n        \"name\": \"3otor Project\"\n    }\n]"
+            }
+          ]
+        },
+        {
+          "name": "Update Project",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Updated Ecommerce Project\",\n  \"description\": \"Updated project description for testcase generation\"\n}"
+            },
+            "url": {
+              "raw": "{{gatewayBaseUrl}}/testcasegenerator/projects/api/update/{{projectId}}",
+              "host": [
+                "{{gatewayBaseUrl}}"
+              ],
+              "path": [
+                "testcasegenerator",
+                "projects",
+                "api",
+                "update",
+                "{{projectId}}"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Update Project",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Updated Ecommerce Project\",\n  \"description\": \"Updated project description for testcase generation\"\n}"
+                },
+                "url": {
+                  "raw": "{{gatewayBaseUrl}}/testcasegenerator/projects/api/update/{{projectId}}",
+                  "host": [
+                    "{{gatewayBaseUrl}}"
+                  ],
+                  "path": [
+                    "testcasegenerator",
+                    "projects",
+                    "api",
+                    "update",
+                    "{{projectId}}"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "transfer-encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Method"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Headers"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "9"
+                },
+                {
+                  "key": "X-RateLimit-Requested-Tokens",
+                  "value": "1"
+                },
+                {
+                  "key": "X-RateLimit-Burst-Capacity",
+                  "value": "10"
+                },
+                {
+                  "key": "X-RateLimit-Replenish-Rate",
+                  "value": "5"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 26 May 2026 12:39:00 GMT"
+                },
+                {
+                  "key": "X-Response-Time",
+                  "value": "2026-05-26T12:34:46.002627040"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"statusCode\": \"200\",\n    \"statusMsg\": \"Request processed successfully\"\n}"
+            },
+            {
+              "name": "Update Project",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Updated Ecommerce Project\",\n  \"description\": \"Updated project description for testcase generation\"\n}"
+                },
+                "url": {
+                  "raw": "{{gatewayBaseUrl}}/testcasegenerator/projects/api/update/33",
+                  "host": [
+                    "{{gatewayBaseUrl}}"
+                  ],
+                  "path": [
+                    "testcasegenerator",
+                    "projects",
+                    "api",
+                    "update",
+                    "33"
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "transfer-encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Method"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Headers"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "9"
+                },
+                {
+                  "key": "X-RateLimit-Requested-Tokens",
+                  "value": "1"
+                },
+                {
+                  "key": "X-RateLimit-Burst-Capacity",
+                  "value": "10"
+                },
+                {
+                  "key": "X-RateLimit-Replenish-Rate",
+                  "value": "5"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 26 May 2026 12:39:09 GMT"
+                },
+                {
+                  "key": "X-Response-Time",
+                  "value": "2026-05-26T12:34:46.002627040"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"apiPath\": \"/api/update/33\",\n    \"errorCode\": \"404 NOT_FOUND\",\n    \"errorMessage\": \"project with id 33not found\",\n    \"errorTime\": \"2026-05-26T12:39:09.794318112\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Search Projects",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{gatewayBaseUrl}}/testcasegenerator/projects/api/search?keyword={{keyword}}",
+              "host": [
+                "{{gatewayBaseUrl}}"
+              ],
+              "path": [
+                "testcasegenerator",
+                "projects",
+                "api",
+                "search"
+              ],
+              "query": [
+                {
+                  "key": "keyword",
+                  "value": "{{keyword}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Search Projects",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{gatewayBaseUrl}}/testcasegenerator/projects/api/search?keyword={{keyword}}",
+                  "host": [
+                    "{{gatewayBaseUrl}}"
+                  ],
+                  "path": [
+                    "testcasegenerator",
+                    "projects",
+                    "api",
+                    "search"
+                  ],
+                  "query": [
+                    {
+                      "key": "keyword",
+                      "value": "{{keyword}}"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "",
+              "header": [
+                {
+                  "key": "transfer-encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Method"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Headers"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "9"
+                },
+                {
+                  "key": "X-RateLimit-Requested-Tokens",
+                  "value": "1"
+                },
+                {
+                  "key": "X-RateLimit-Burst-Capacity",
+                  "value": "10"
+                },
+                {
+                  "key": "X-RateLimit-Replenish-Rate",
+                  "value": "5"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 26 May 2026 12:39:26 GMT"
+                },
+                {
+                  "key": "X-Response-Time",
+                  "value": "2026-05-26T12:34:46.002627040"
+                }
+              ],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "domain": "",
+                  "path": ""
+                }
+              ],
+              "body": "[\n    {\n        \"createdAt\": \"2026-05-25T15:24:41.603118\",\n        \"description\": \"Updated project description for testcase generation\",\n        \"id\": 1,\n        \"lastModifiedAt\": \"2026-05-26T12:39:00.503185\",\n        \"name\": \"Updated Ecommerce Project\"\n    },\n    {\n        \"createdAt\": \"2026-05-25T15:28:32.411192\",\n        \"description\": \"Ecommerce project for generating and managing test cases\",\n        \"id\": 2,\n        \"lastModifiedAt\": null,\n        \"name\": \"Ecommerceee Project\"\n    }\n]"
+            },
+            {
+              "name": "Search Projects",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{gatewayBaseUrl}}/testcasegenerator/projects/api/search?keyword=hamdi",
+                  "host": [
+                    "{{gatewayBaseUrl}}"
+                  ],
+                  "path": [
+                    "testcasegenerator",
+                    "projects",
+                    "api",
+                    "search"
+                  ],
+                  "query": [
+                    {
+                      "key": "keyword",
+                      "value": "hamdi"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "transfer-encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Method"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Headers"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "9"
+                },
+                {
+                  "key": "X-RateLimit-Requested-Tokens",
+                  "value": "1"
+                },
+                {
+                  "key": "X-RateLimit-Burst-Capacity",
+                  "value": "10"
+                },
+                {
+                  "key": "X-RateLimit-Replenish-Rate",
+                  "value": "5"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 26 May 2026 12:40:23 GMT"
+                },
+                {
+                  "key": "X-Response-Time",
+                  "value": "2026-05-26T12:34:46.002627040"
+                }
+              ],
+              "cookie": [],
+              "body": "[]"
+            }
+          ]
+        },
+        {
+          "name": "Delete Project",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{gatewayBaseUrl}}/testcasegenerator/projects/api/delete/{{projectId}}",
+              "host": [
+                "{{gatewayBaseUrl}}"
+              ],
+              "path": [
+                "testcasegenerator",
+                "projects",
+                "api",
+                "delete",
+                "{{projectId}}"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Delete Project",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{gatewayBaseUrl}}/testcasegenerator/projects/api/delete/444",
+                  "host": [
+                    "{{gatewayBaseUrl}}"
+                  ],
+                  "path": [
+                    "testcasegenerator",
+                    "projects",
+                    "api",
+                    "delete",
+                    "444"
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "transfer-encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Method"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Headers"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "9"
+                },
+                {
+                  "key": "X-RateLimit-Requested-Tokens",
+                  "value": "1"
+                },
+                {
+                  "key": "X-RateLimit-Burst-Capacity",
+                  "value": "10"
+                },
+                {
+                  "key": "X-RateLimit-Replenish-Rate",
+                  "value": "5"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 26 May 2026 12:40:39 GMT"
+                },
+                {
+                  "key": "X-Response-Time",
+                  "value": "2026-05-26T12:34:46.002627040"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"apiPath\": \"/api/delete/444\",\n    \"errorCode\": \"404 NOT_FOUND\",\n    \"errorMessage\": \"project with id 444not found\",\n    \"errorTime\": \"2026-05-26T12:40:39.457857031\"\n}"
+            },
+            {
+              "name": "Delete Project",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{gatewayBaseUrl}}/testcasegenerator/projects/api/delete/{{projectId}}",
+                  "host": [
+                    "{{gatewayBaseUrl}}"
+                  ],
+                  "path": [
+                    "testcasegenerator",
+                    "projects",
+                    "api",
+                    "delete",
+                    "{{projectId}}"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "transfer-encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Method"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Headers"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "9"
+                },
+                {
+                  "key": "X-RateLimit-Requested-Tokens",
+                  "value": "1"
+                },
+                {
+                  "key": "X-RateLimit-Burst-Capacity",
+                  "value": "10"
+                },
+                {
+                  "key": "X-RateLimit-Replenish-Rate",
+                  "value": "5"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 26 May 2026 12:40:47 GMT"
+                },
+                {
+                  "key": "X-Response-Time",
+                  "value": "2026-05-26T12:34:46.002627040"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"statusCode\": \"200\",\n    \"statusMsg\": \"Request processed successfully\"\n}"
+            }
+          ]
+        }
+      ],
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlIjoiQ1VTVE9NRVIiLCJ1c2VySWQiOjEsImVtYWlsIjoiN2FtZGlzaGVoYWJAZ21haWwuY29tIiwic3ViIjoiN2FtZGlzaGVoYWJAZ21haWwuY29tIiwiaWF0IjoxNzc5Nzk5MDI2LCJleHAiOjE3Nzk3OTk2MjZ9.itbDnbp_2AFjkk9eP651bqpvh7AZmnA-SrApG7Qlsu-6R21gXHmYYkbwR5YXFhAV",
+            "type": "string"
+          }
+        ]
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {},
+            "exec": [
+              ""
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {},
+            "exec": [
+              ""
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Requirements",
+      "item": [
+        {
+          "name": "Create Requirement",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"User login\",\n  \"userStory\": \"As a user, I want to log in using email and password so that I can access my account securely\",\n  \"projectId\": {{projectId}}\n}"
+            },
+            "url": {
+              "raw": "{{gatewayBaseUrl}}/testcasegenerator/requirements/api/create",
+              "host": [
+                "{{gatewayBaseUrl}}"
+              ],
+              "path": [
+                "testcasegenerator",
+                "requirements",
+                "api",
+                "create"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Create Requirement",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"title\": \"User login\",\n  \"userStory\": \"As a user, I want to log in using email and password so that I can access my account securely\",\n  \"projectId\": {{projectId}}\n}"
+                },
+                "url": {
+                  "raw": "{{gatewayBaseUrl}}/testcasegenerator/requirements/api/create",
+                  "host": [
+                    "{{gatewayBaseUrl}}"
+                  ],
+                  "path": [
+                    "testcasegenerator",
+                    "requirements",
+                    "api",
+                    "create"
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "transfer-encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Method"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Headers"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "9"
+                },
+                {
+                  "key": "X-RateLimit-Requested-Tokens",
+                  "value": "1"
+                },
+                {
+                  "key": "X-RateLimit-Burst-Capacity",
+                  "value": "10"
+                },
+                {
+                  "key": "X-RateLimit-Replenish-Rate",
+                  "value": "5"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 26 May 2026 12:41:17 GMT"
+                },
+                {
+                  "key": "X-Response-Time",
+                  "value": "2026-05-26T12:34:46.003931172"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"apiPath\": \"/api/create\",\n    \"errorCode\": \"404 NOT_FOUND\",\n    \"errorMessage\": \"[404] during [GET] to [http://projects/api/fetch/1] [ProjectsFeignClient#fetchProject(Long,Integer)]: [{\\\"apiPath\\\":\\\"/api/fetch/1\\\",\\\"errorCode\\\":\\\"404 NOT_FOUND\\\",\\\"errorMessage\\\":\\\"project with id 1not found\\\",\\\"errorTime\\\":\\\"2026-05-26T12:41:17.077348882\\\"}]\",\n    \"errorTime\": \"2026-05-26T12:41:17.106154904\"\n}"
+            },
+            {
+              "name": "Create Requirement",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"title\": \"User login\",\n  \"userStory\": \"As a user, I want to log in using email and password so that I can access my account securely\",\n  \"projectId\": 2\n}"
+                },
+                "url": {
+                  "raw": "{{gatewayBaseUrl}}/testcasegenerator/requirements/api/create",
+                  "host": [
+                    "{{gatewayBaseUrl}}"
+                  ],
+                  "path": [
+                    "testcasegenerator",
+                    "requirements",
+                    "api",
+                    "create"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "transfer-encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Method"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Headers"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "9"
+                },
+                {
+                  "key": "X-RateLimit-Requested-Tokens",
+                  "value": "1"
+                },
+                {
+                  "key": "X-RateLimit-Burst-Capacity",
+                  "value": "10"
+                },
+                {
+                  "key": "X-RateLimit-Replenish-Rate",
+                  "value": "5"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 26 May 2026 12:41:59 GMT"
+                },
+                {
+                  "key": "X-Response-Time",
+                  "value": "2026-05-26T12:34:46.003931172"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"statusCode\": \"201\",\n    \"statusMsg\": \"Requirement created successfully\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Fetch Requirement",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{gatewayBaseUrl}}/testcasegenerator/requirements/api/fetch/{{requirementId}}",
+              "host": [
+                "{{gatewayBaseUrl}}"
+              ],
+              "path": [
+                "testcasegenerator",
+                "requirements",
+                "api",
+                "fetch",
+                "{{requirementId}}"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Fetch Requirement",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{gatewayBaseUrl}}/testcasegenerator/requirements/api/fetch/{{requirementId}}",
+                  "host": [
+                    "{{gatewayBaseUrl}}"
+                  ],
+                  "path": [
+                    "testcasegenerator",
+                    "requirements",
+                    "api",
+                    "fetch",
+                    "{{requirementId}}"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "transfer-encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Method"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Headers"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "9"
+                },
+                {
+                  "key": "X-RateLimit-Requested-Tokens",
+                  "value": "1"
+                },
+                {
+                  "key": "X-RateLimit-Burst-Capacity",
+                  "value": "10"
+                },
+                {
+                  "key": "X-RateLimit-Replenish-Rate",
+                  "value": "5"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 26 May 2026 12:42:16 GMT"
+                },
+                {
+                  "key": "X-Response-Time",
+                  "value": "2026-05-26T12:34:46.003931172"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"createdAt\": \"2026-05-25T15:25:04.496296\",\n    \"id\": 1,\n    \"lasModifiedAt\": null,\n    \"projectId\": 1,\n    \"title\": \"User login\",\n    \"userStory\": \"As a user, I want to log in using email and password so that I can access my account securely\"\n}"
+            },
+            {
+              "name": "Fetch Requirement",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{gatewayBaseUrl}}/testcasegenerator/requirements/api/fetch/33",
+                  "host": [
+                    "{{gatewayBaseUrl}}"
+                  ],
+                  "path": [
+                    "testcasegenerator",
+                    "requirements",
+                    "api",
+                    "fetch",
+                    "33"
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "transfer-encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Method"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Headers"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "9"
+                },
+                {
+                  "key": "X-RateLimit-Requested-Tokens",
+                  "value": "1"
+                },
+                {
+                  "key": "X-RateLimit-Burst-Capacity",
+                  "value": "10"
+                },
+                {
+                  "key": "X-RateLimit-Replenish-Rate",
+                  "value": "5"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 26 May 2026 12:42:27 GMT"
+                },
+                {
+                  "key": "X-Response-Time",
+                  "value": "2026-05-26T12:34:46.003931172"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"apiPath\": \"/api/fetch/33\",\n    \"errorCode\": \"404 NOT_FOUND\",\n    \"errorMessage\": \"Requirement with id: 33 not found\",\n    \"errorTime\": \"2026-05-26T12:42:27.293876338\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Fetch All Requirements By Project",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "const body = pm.response.json();",
+                  "if (Array.isArray(body) && body.length && body[0].id) {",
+                  "  pm.collectionVariables.set('requirementId', String(body[0].id));",
+                  "}"
+                ],
+                "type": "text/javascript",
+                "packages": {},
+                "requests": {}
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "exec": [],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{gatewayBaseUrl}}/testcasegenerator/requirements/api/fetch-all?projectId={{projectId}}",
+              "host": [
+                "{{gatewayBaseUrl}}"
+              ],
+              "path": [
+                "testcasegenerator",
+                "requirements",
+                "api",
+                "fetch-all"
+              ],
+              "query": [
+                {
+                  "key": "projectId",
+                  "value": "{{projectId}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Fetch All Requirements By Project",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{gatewayBaseUrl}}/testcasegenerator/requirements/api/fetch-all?projectId={{projectId}}",
+                  "host": [
+                    "{{gatewayBaseUrl}}"
+                  ],
+                  "path": [
+                    "testcasegenerator",
+                    "requirements",
+                    "api",
+                    "fetch-all"
+                  ],
+                  "query": [
+                    {
+                      "key": "projectId",
+                      "value": "{{projectId}}"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "transfer-encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Method"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Headers"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "9"
+                },
+                {
+                  "key": "X-RateLimit-Requested-Tokens",
+                  "value": "1"
+                },
+                {
+                  "key": "X-RateLimit-Burst-Capacity",
+                  "value": "10"
+                },
+                {
+                  "key": "X-RateLimit-Replenish-Rate",
+                  "value": "5"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 26 May 2026 12:42:43 GMT"
+                },
+                {
+                  "key": "X-Response-Time",
+                  "value": "2026-05-26T12:34:46.003931172"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"createdAt\": \"2026-05-26T12:41:58.929711\",\n        \"id\": 2,\n        \"lasModifiedAt\": null,\n        \"projectId\": 2,\n        \"title\": \"User login\",\n        \"userStory\": \"As a user, I want to log in using email and password so that I can access my account securely\"\n    }\n]"
+            },
+            {
+              "name": "Fetch All Requirements By Project",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{gatewayBaseUrl}}/testcasegenerator/requirements/api/fetch-all?projectId=3",
+                  "host": [
+                    "{{gatewayBaseUrl}}"
+                  ],
+                  "path": [
+                    "testcasegenerator",
+                    "requirements",
+                    "api",
+                    "fetch-all"
+                  ],
+                  "query": [
+                    {
+                      "key": "projectId",
+                      "value": "3"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "transfer-encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Method"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Headers"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "9"
+                },
+                {
+                  "key": "X-RateLimit-Requested-Tokens",
+                  "value": "1"
+                },
+                {
+                  "key": "X-RateLimit-Burst-Capacity",
+                  "value": "10"
+                },
+                {
+                  "key": "X-RateLimit-Replenish-Rate",
+                  "value": "5"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 26 May 2026 12:42:52 GMT"
+                },
+                {
+                  "key": "X-Response-Time",
+                  "value": "2026-05-26T12:34:46.003931172"
+                }
+              ],
+              "cookie": [],
+              "body": "[]"
+            }
+          ]
+        },
+        {
+          "name": "Update Requirement",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Updated user login\",\n  \"userStory\": \"As a user, I want to log in using email and password so that I can access my account securely and reliably\",\n  \"projectId\": {{projectId}}\n}"
+            },
+            "url": {
+              "raw": "{{gatewayBaseUrl}}/testcasegenerator/requirements/api/update/{{requirementId}}",
+              "host": [
+                "{{gatewayBaseUrl}}"
+              ],
+              "path": [
+                "testcasegenerator",
+                "requirements",
+                "api",
+                "update",
+                "{{requirementId}}"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Update Requirement",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"title\": \"Updated user login\",\n  \"userStory\": \"As a user, I want to log in using email and password so that I can access my account securely and reliably\",\n  \"projectId\": {{projectId}}\n}"
+                },
+                "url": {
+                  "raw": "{{gatewayBaseUrl}}/testcasegenerator/requirements/api/update/{{requirementId}}",
+                  "host": [
+                    "{{gatewayBaseUrl}}"
+                  ],
+                  "path": [
+                    "testcasegenerator",
+                    "requirements",
+                    "api",
+                    "update",
+                    "{{requirementId}}"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "transfer-encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Method"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Headers"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "9"
+                },
+                {
+                  "key": "X-RateLimit-Requested-Tokens",
+                  "value": "1"
+                },
+                {
+                  "key": "X-RateLimit-Burst-Capacity",
+                  "value": "10"
+                },
+                {
+                  "key": "X-RateLimit-Replenish-Rate",
+                  "value": "5"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 26 May 2026 12:43:14 GMT"
+                },
+                {
+                  "key": "X-Response-Time",
+                  "value": "2026-05-26T12:34:46.003931172"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"statusCode\": \"200\",\n    \"statusMsg\": \"Request processed successfully\"\n}"
+            },
+            {
+              "name": "Update Requirement",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"title\": \"Updated user login\",\n  \"userStory\": \"As a user, I want to log in using email and password so that I can access my account securely and reliably\",\n  \"projectId\": {{projectId}}\n}"
+                },
+                "url": {
+                  "raw": "{{gatewayBaseUrl}}/testcasegenerator/requirements/api/update/44",
+                  "host": [
+                    "{{gatewayBaseUrl}}"
+                  ],
+                  "path": [
+                    "testcasegenerator",
+                    "requirements",
+                    "api",
+                    "update",
+                    "44"
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "transfer-encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Method"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Headers"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "9"
+                },
+                {
+                  "key": "X-RateLimit-Requested-Tokens",
+                  "value": "1"
+                },
+                {
+                  "key": "X-RateLimit-Burst-Capacity",
+                  "value": "10"
+                },
+                {
+                  "key": "X-RateLimit-Replenish-Rate",
+                  "value": "5"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 26 May 2026 12:43:23 GMT"
+                },
+                {
+                  "key": "X-Response-Time",
+                  "value": "2026-05-26T12:34:46.003931172"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"apiPath\": \"/api/update/44\",\n    \"errorCode\": \"404 NOT_FOUND\",\n    \"errorMessage\": \"Requirement with id: 44 not found\",\n    \"errorTime\": \"2026-05-26T12:43:23.529844614\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Delete Requirement",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{gatewayBaseUrl}}/testcasegenerator/requirements/api/delete/{{requirementId}}",
+              "host": [
+                "{{gatewayBaseUrl}}"
+              ],
+              "path": [
+                "testcasegenerator",
+                "requirements",
+                "api",
+                "delete",
+                "{{requirementId}}"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Delete Requirement",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{gatewayBaseUrl}}/testcasegenerator/requirements/api/delete/{{requirementId}}",
+                  "host": [
+                    "{{gatewayBaseUrl}}"
+                  ],
+                  "path": [
+                    "testcasegenerator",
+                    "requirements",
+                    "api",
+                    "delete",
+                    "{{requirementId}}"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "transfer-encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Method"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Headers"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "9"
+                },
+                {
+                  "key": "X-RateLimit-Requested-Tokens",
+                  "value": "1"
+                },
+                {
+                  "key": "X-RateLimit-Burst-Capacity",
+                  "value": "10"
+                },
+                {
+                  "key": "X-RateLimit-Replenish-Rate",
+                  "value": "5"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 26 May 2026 12:43:37 GMT"
+                },
+                {
+                  "key": "X-Response-Time",
+                  "value": "2026-05-26T12:34:46.003931172"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"statusCode\": \"200\",\n    \"statusMsg\": \"Request processed successfully\"\n}"
+            },
+            {
+              "name": "Delete Requirement",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{gatewayBaseUrl}}/testcasegenerator/requirements/api/delete/44",
+                  "host": [
+                    "{{gatewayBaseUrl}}"
+                  ],
+                  "path": [
+                    "testcasegenerator",
+                    "requirements",
+                    "api",
+                    "delete",
+                    "44"
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "transfer-encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Method"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Headers"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "9"
+                },
+                {
+                  "key": "X-RateLimit-Requested-Tokens",
+                  "value": "1"
+                },
+                {
+                  "key": "X-RateLimit-Burst-Capacity",
+                  "value": "10"
+                },
+                {
+                  "key": "X-RateLimit-Replenish-Rate",
+                  "value": "5"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 26 May 2026 12:44:06 GMT"
+                },
+                {
+                  "key": "X-Response-Time",
+                  "value": "2026-05-26T12:34:46.003931172"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"apiPath\": \"/api/delete/44\",\n    \"errorCode\": \"404 NOT_FOUND\",\n    \"errorMessage\": \"Requirement with id: 44 not found\",\n    \"errorTime\": \"2026-05-26T12:44:06.303128781\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Generate Testcases For Requirement",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{gatewayBaseUrl}}/testcasegenerator/requirements/api/1/generate-testcases",
+              "host": [
+                "{{gatewayBaseUrl}}"
+              ],
+              "path": [
+                "testcasegenerator",
+                "requirements",
+                "api",
+                "1",
+                "generate-testcases"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Generate Testcases For Requirement",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{gatewayBaseUrl}}/testcasegenerator/requirements/api/1/generate-testcases",
+                  "host": [
+                    "{{gatewayBaseUrl}}"
+                  ],
+                  "path": [
+                    "testcasegenerator",
+                    "requirements",
+                    "api",
+                    "1",
+                    "generate-testcases"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "transfer-encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Method"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Headers"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "0"
+                },
+                {
+                  "key": "X-RateLimit-Requested-Tokens",
+                  "value": "60"
+                },
+                {
+                  "key": "X-RateLimit-Burst-Capacity",
+                  "value": "60"
+                },
+                {
+                  "key": "X-RateLimit-Replenish-Rate",
+                  "value": "1"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 26 May 2026 12:44:33 GMT"
+                },
+                {
+                  "key": "X-Response-Time",
+                  "value": "2026-05-26T12:34:45.745022356"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"testCases\": [\n        {\n            \"expected_result\": \"User is successfully authenticated and redirected to their account dashboard\",\n            \"steps\": [\n                \"Navigate to login page\",\n                \"Enter valid email address in email field\",\n                \"Enter correct password in password field\",\n                \"Click on login button\"\n            ],\n            \"title\": \"Valid user login with correct credentials\",\n            \"type\": \"positive\"\n        },\n        {\n            \"expected_result\": \"System displays error message indicating invalid email format and prevents login\",\n            \"steps\": [\n                \"Navigate to login page\",\n                \"Enter email address without '@' symbol (e.g., 'testexample.com')\",\n                \"Enter valid password in password field\",\n                \"Click on login button\"\n            ],\n            \"title\": \"Login attempt with invalid email format\",\n            \"type\": \"negative\"\n        },\n        {\n            \"expected_result\": \"System rejects the input and displays generic error message without exposing database information\",\n            \"steps\": [\n                \"Navigate to login page\",\n                \"Enter valid email address\",\n                \"Enter SQL injection string in password field (e.g., \\\"' OR '1'='1\\\")\",\n                \"Click on login button\"\n            ],\n            \"title\": \"Login attempt with SQL injection in password field\",\n            \"type\": \"negative\"\n        },\n        {\n            \"expected_result\": \"System displays validation error indicating both fields are required\",\n            \"steps\": [\n                \"Navigate to login page\",\n                \"Leave email field empty\",\n                \"Leave password field empty\",\n                \"Click on login button\"\n            ],\n            \"title\": \"Login attempt with empty email and password fields\",\n            \"type\": \"boundary\"\n        },\n        {\n            \"expected_result\": \"System displays error message indicating invalid credentials\",\n            \"steps\": [\n                \"Navigate to login page\",\n                \"Enter email address that does not exist in system (e.g., 'nonexistent@example.com')\",\n                \"Enter any password in password field\",\n                \"Click on login button\"\n            ],\n            \"title\": \"Login attempt with non-existent email address\",\n            \"type\": \"negative\"\n        },\n        {\n            \"expected_result\": \"System displays error message indicating invalid credentials\",\n            \"steps\": [\n                \"Navigate to login page\",\n                \"Enter valid registered email address\",\n                \"Enter incorrect password (wrong combination of characters)\",\n                \"Click on login button\"\n            ],\n            \"title\": \"Login attempt with incorrect password\",\n            \"type\": \"negative\"\n        },\n        {\n            \"expected_result\": \"System accepts the input and processes the login request appropriately\",\n            \"steps\": [\n                \"Navigate to login page\",\n                \"Enter email address at maximum allowed length (e.g., 254 characters)\",\n                \"Enter password at maximum allowed length\",\n                \"Click on login button\"\n            ],\n            \"title\": \"Login attempt with maximum length email and password\",\n            \"type\": \"boundary\"\n        },\n        {\n            \"expected_result\": \"System sanitizes input and does not execute or render any scripts, displaying appropriate error if invalid\",\n            \"steps\": [\n                \"Navigate to login page\",\n                \"Enter valid email address\",\n                \"Enter password containing special characters and symbols (e.g., '<script>alert(1)</script>')\",\n                \"Click on login button\"\n            ],\n            \"title\": \"Login attempt with special characters in password\",\n            \"type\": \"negative\"\n        }\n    ]\n}"
+            },
+            {
+              "name": "Generate Testcases For Requirement",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "{{gatewayBaseUrl}}/testcasegenerator/requirements/api/13/generate-testcases",
+                  "host": [
+                    "{{gatewayBaseUrl}}"
+                  ],
+                  "path": [
+                    "testcasegenerator",
+                    "requirements",
+                    "api",
+                    "13",
+                    "generate-testcases"
+                  ]
+                }
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Method"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Headers"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "30"
+                },
+                {
+                  "key": "X-RateLimit-Requested-Tokens",
+                  "value": "60"
+                },
+                {
+                  "key": "X-RateLimit-Burst-Capacity",
+                  "value": "60"
+                },
+                {
+                  "key": "X-RateLimit-Replenish-Rate",
+                  "value": "1"
+                },
+                {
+                  "key": "content-length",
+                  "value": "0"
+                }
+              ],
+              "cookie": [],
+              "body": null
+            }
+          ]
+        },
+        {
+          "name": "Get Testcases By Requirement",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{gatewayBaseUrl}}/testcasegenerator/requirements/api/1/testcases",
+              "host": [
+                "{{gatewayBaseUrl}}"
+              ],
+              "path": [
+                "testcasegenerator",
+                "requirements",
+                "api",
+                "1",
+                "testcases"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get Testcases By Requirement",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{gatewayBaseUrl}}/testcasegenerator/requirements/api/1/testcases",
+                  "host": [
+                    "{{gatewayBaseUrl}}"
+                  ],
+                  "path": [
+                    "testcasegenerator",
+                    "requirements",
+                    "api",
+                    "1",
+                    "testcases"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "transfer-encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Method"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Headers"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "9"
+                },
+                {
+                  "key": "X-RateLimit-Requested-Tokens",
+                  "value": "1"
+                },
+                {
+                  "key": "X-RateLimit-Burst-Capacity",
+                  "value": "10"
+                },
+                {
+                  "key": "X-RateLimit-Replenish-Rate",
+                  "value": "5"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 26 May 2026 12:45:16 GMT"
+                },
+                {
+                  "key": "X-Response-Time",
+                  "value": "2026-05-26T12:34:46.003931172"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"expected_result\": \"User is authenticated and redirected to the dashboard\",\n        \"id\": 1,\n        \"steps\": [\n            \"Navigate to the login page\",\n            \"Enter a valid email address\",\n            \"Enter the correct password\",\n            \"Click the login button\"\n        ],\n        \"title\": \"Valid User Login\",\n        \"type\": \"positive\"\n    },\n    {\n        \"expected_result\": \"User is successfully authenticated and redirected to their account dashboard or home page\",\n        \"id\": 2,\n        \"steps\": [\n            \"Navigate to login page\",\n            \"Enter valid email address in email field\",\n            \"Enter correct password in password field\",\n            \"Click on login/submit button\"\n        ],\n        \"title\": \"Valid login with correct email and password\",\n        \"type\": \"positive\"\n    },\n    {\n        \"expected_result\": \"System displays validation error message indicating invalid email format and prevents login\",\n        \"id\": 3,\n        \"steps\": [\n            \"Navigate to login page\",\n            \"Enter email address without @ symbol (e.g., testexample.com)\",\n            \"Enter valid password in password field\",\n            \"Click on login/submit button\"\n        ],\n        \"title\": \"Login attempt with invalid email format\",\n        \"type\": \"negative\"\n    },\n    {\n        \"expected_result\": \"System displays error message indicating invalid credentials and prevents access\",\n        \"id\": 4,\n        \"steps\": [\n            \"Navigate to login page\",\n            \"Enter valid email address\",\n            \"Enter wrong password (different from registered password)\",\n            \"Click on login/submit button\"\n        ],\n        \"title\": \"Login attempt with incorrect password\",\n        \"type\": \"negative\"\n    },\n    {\n        \"expected_result\": \"System displays error message indicating invalid credentials without revealing whether email exists\",\n        \"id\": 5,\n        \"steps\": [\n            \"Navigate to login page\",\n            \"Enter email address that is not registered in the system\",\n            \"Enter any valid password\",\n            \"Click on login/submit button\"\n        ],\n        \"title\": \"Login attempt with non-existent email address\",\n        \"type\": \"negative\"\n    },\n    {\n        \"expected_result\": \"System displays validation error message indicating email is required and prevents login\",\n        \"id\": 6,\n        \"steps\": [\n            \"Navigate to login page\",\n            \"Leave email field empty\",\n            \"Enter valid password in password field\",\n            \"Click on login/submit button\"\n        ],\n        \"title\": \"Login attempt with empty email field\",\n        \"type\": \"boundary\"\n    },\n    {\n        \"expected_result\": \"System displays validation error message indicating password is required and prevents login\",\n        \"id\": 7,\n        \"steps\": [\n            \"Navigate to login page\",\n            \"Enter valid email address\",\n            \"Leave password field empty\",\n            \"Click on login/submit button\"\n        ],\n        \"title\": \"Login attempt with empty password field\",\n        \"type\": \"boundary\"\n    },\n    {\n        \"expected_result\": \"System prevents SQL injection attack, displays generic error message, and does not grant unauthorized access\",\n        \"id\": 8,\n        \"steps\": [\n            \"Navigate to login page\",\n            \"Enter SQL injection payload in email field (e.g., admin@example.com' OR '1'='1)\",\n            \"Enter any password\",\n            \"Click on login/submit button\"\n        ],\n        \"title\": \"Login attempt with SQL injection in email field\",\n        \"type\": \"negative\"\n    },\n    {\n        \"expected_result\": \"System handles special characters safely without executing scripts and displays appropriate error or prevents login\",\n        \"id\": 9,\n        \"steps\": [\n            \"Navigate to login page\",\n            \"Enter valid email address\",\n            \"Enter password containing special characters (e.g., <script>alert('xss')</script>)\",\n            \"Click on login/submit button\"\n        ],\n        \"title\": \"Login attempt with special characters in password\",\n        \"type\": \"negative\"\n    },\n    {\n        \"expected_result\": \"User is successfully authenticated and redirected to their account dashboard\",\n        \"id\": 10,\n        \"steps\": [\n            \"Navigate to login page\",\n            \"Enter valid email address in email field\",\n            \"Enter correct password in password field\",\n            \"Click on login button\"\n        ],\n        \"title\": \"Valid user login with correct credentials\",\n        \"type\": \"positive\"\n    },\n    {\n        \"expected_result\": \"System displays error message indicating invalid email format and prevents login\",\n        \"id\": 11,\n        \"steps\": [\n            \"Navigate to login page\",\n            \"Enter email address without '@' symbol (e.g., 'testexample.com')\",\n            \"Enter valid password in password field\",\n            \"Click on login button\"\n        ],\n        \"title\": \"Login attempt with invalid email format\",\n        \"type\": \"negative\"\n    },\n    {\n        \"expected_result\": \"System rejects the input and displays generic error message without exposing database information\",\n        \"id\": 12,\n        \"steps\": [\n            \"Navigate to login page\",\n            \"Enter valid email address\",\n            \"Enter SQL injection string in password field (e.g., \\\"' OR '1'='1\\\")\",\n            \"Click on login button\"\n        ],\n        \"title\": \"Login attempt with SQL injection in password field\",\n        \"type\": \"negative\"\n    },\n    {\n        \"expected_result\": \"System displays validation error indicating both fields are required\",\n        \"id\": 13,\n        \"steps\": [\n            \"Navigate to login page\",\n            \"Leave email field empty\",\n            \"Leave password field empty\",\n            \"Click on login button\"\n        ],\n        \"title\": \"Login attempt with empty email and password fields\",\n        \"type\": \"boundary\"\n    },\n    {\n        \"expected_result\": \"System displays error message indicating invalid credentials\",\n        \"id\": 14,\n        \"steps\": [\n            \"Navigate to login page\",\n            \"Enter email address that does not exist in system (e.g., 'nonexistent@example.com')\",\n            \"Enter any password in password field\",\n            \"Click on login button\"\n        ],\n        \"title\": \"Login attempt with non-existent email address\",\n        \"type\": \"negative\"\n    },\n    {\n        \"expected_result\": \"System displays error message indicating invalid credentials\",\n        \"id\": 15,\n        \"steps\": [\n            \"Navigate to login page\",\n            \"Enter valid registered email address\",\n            \"Enter incorrect password (wrong combination of characters)\",\n            \"Click on login button\"\n        ],\n        \"title\": \"Login attempt with incorrect password\",\n        \"type\": \"negative\"\n    },\n    {\n        \"expected_result\": \"System accepts the input and processes the login request appropriately\",\n        \"id\": 16,\n        \"steps\": [\n            \"Navigate to login page\",\n            \"Enter email address at maximum allowed length (e.g., 254 characters)\",\n            \"Enter password at maximum allowed length\",\n            \"Click on login button\"\n        ],\n        \"title\": \"Login attempt with maximum length email and password\",\n        \"type\": \"boundary\"\n    },\n    {\n        \"expected_result\": \"System sanitizes input and does not execute or render any scripts, displaying appropriate error if invalid\",\n        \"id\": 17,\n        \"steps\": [\n            \"Navigate to login page\",\n            \"Enter valid email address\",\n            \"Enter password containing special characters and symbols (e.g., '<script>alert(1)</script>')\",\n            \"Click on login button\"\n        ],\n        \"title\": \"Login attempt with special characters in password\",\n        \"type\": \"negative\"\n    }\n]"
+            },
+            {
+              "name": "Get Testcases By Requirement",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{gatewayBaseUrl}}/testcasegenerator/requirements/api/13/testcases",
+                  "host": [
+                    "{{gatewayBaseUrl}}"
+                  ],
+                  "path": [
+                    "testcasegenerator",
+                    "requirements",
+                    "api",
+                    "13",
+                    "testcases"
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "transfer-encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Method"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Headers"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "9"
+                },
+                {
+                  "key": "X-RateLimit-Requested-Tokens",
+                  "value": "1"
+                },
+                {
+                  "key": "X-RateLimit-Burst-Capacity",
+                  "value": "10"
+                },
+                {
+                  "key": "X-RateLimit-Replenish-Rate",
+                  "value": "5"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 26 May 2026 12:45:33 GMT"
+                },
+                {
+                  "key": "X-Response-Time",
+                  "value": "2026-05-26T12:34:46.003931172"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"apiPath\": \"/api/13/testcases\",\n    \"errorCode\": \"404 NOT_FOUND\",\n    \"errorMessage\": \"Requirement not found\",\n    \"errorTime\": \"2026-05-26T12:45:33.639741837\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get Testcases By Project",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{gatewayBaseUrl}}/testcasegenerator/requirements/api/project/1/testcases",
+              "host": [
+                "{{gatewayBaseUrl}}"
+              ],
+              "path": [
+                "testcasegenerator",
+                "requirements",
+                "api",
+                "project",
+                "1",
+                "testcases"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get Testcases By Project",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{gatewayBaseUrl}}/testcasegenerator/requirements/api/project/{{projectId}}/testcases",
+                  "host": [
+                    "{{gatewayBaseUrl}}"
+                  ],
+                  "path": [
+                    "testcasegenerator",
+                    "requirements",
+                    "api",
+                    "project",
+                    "{{projectId}}",
+                    "testcases"
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "transfer-encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Method"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Headers"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "9"
+                },
+                {
+                  "key": "X-RateLimit-Requested-Tokens",
+                  "value": "1"
+                },
+                {
+                  "key": "X-RateLimit-Burst-Capacity",
+                  "value": "10"
+                },
+                {
+                  "key": "X-RateLimit-Replenish-Rate",
+                  "value": "5"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 26 May 2026 12:45:47 GMT"
+                },
+                {
+                  "key": "X-Response-Time",
+                  "value": "2026-05-26T12:34:46.003931172"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"apiPath\": \"/api/project/2/testcases\",\n    \"errorCode\": \"404 NOT_FOUND\",\n    \"errorMessage\": \"No requirements found for project\",\n    \"errorTime\": \"2026-05-26T12:45:47.090681616\"\n}"
+            },
+            {
+              "name": "Get Testcases By Project",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{gatewayBaseUrl}}/testcasegenerator/requirements/api/project/1/testcases",
+                  "host": [
+                    "{{gatewayBaseUrl}}"
+                  ],
+                  "path": [
+                    "testcasegenerator",
+                    "requirements",
+                    "api",
+                    "project",
+                    "1",
+                    "testcases"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "transfer-encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Method"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Headers"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "9"
+                },
+                {
+                  "key": "X-RateLimit-Requested-Tokens",
+                  "value": "1"
+                },
+                {
+                  "key": "X-RateLimit-Burst-Capacity",
+                  "value": "10"
+                },
+                {
+                  "key": "X-RateLimit-Replenish-Rate",
+                  "value": "5"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 26 May 2026 12:45:57 GMT"
+                },
+                {
+                  "key": "X-Response-Time",
+                  "value": "2026-05-26T12:34:46.003931172"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"expected_result\": \"User is authenticated and redirected to the dashboard\",\n        \"id\": 1,\n        \"steps\": [\n            \"Navigate to the login page\",\n            \"Enter a valid email address\",\n            \"Enter the correct password\",\n            \"Click the login button\"\n        ],\n        \"title\": \"Valid User Login\",\n        \"type\": \"positive\"\n    },\n    {\n        \"expected_result\": \"User is successfully authenticated and redirected to their account dashboard or home page\",\n        \"id\": 2,\n        \"steps\": [\n            \"Navigate to login page\",\n            \"Enter valid email address in email field\",\n            \"Enter correct password in password field\",\n            \"Click on login/submit button\"\n        ],\n        \"title\": \"Valid login with correct email and password\",\n        \"type\": \"positive\"\n    },\n    {\n        \"expected_result\": \"System displays validation error message indicating invalid email format and prevents login\",\n        \"id\": 3,\n        \"steps\": [\n            \"Navigate to login page\",\n            \"Enter email address without @ symbol (e.g., testexample.com)\",\n            \"Enter valid password in password field\",\n            \"Click on login/submit button\"\n        ],\n        \"title\": \"Login attempt with invalid email format\",\n        \"type\": \"negative\"\n    },\n    {\n        \"expected_result\": \"System displays error message indicating invalid credentials and prevents access\",\n        \"id\": 4,\n        \"steps\": [\n            \"Navigate to login page\",\n            \"Enter valid email address\",\n            \"Enter wrong password (different from registered password)\",\n            \"Click on login/submit button\"\n        ],\n        \"title\": \"Login attempt with incorrect password\",\n        \"type\": \"negative\"\n    },\n    {\n        \"expected_result\": \"System displays error message indicating invalid credentials without revealing whether email exists\",\n        \"id\": 5,\n        \"steps\": [\n            \"Navigate to login page\",\n            \"Enter email address that is not registered in the system\",\n            \"Enter any valid password\",\n            \"Click on login/submit button\"\n        ],\n        \"title\": \"Login attempt with non-existent email address\",\n        \"type\": \"negative\"\n    },\n    {\n        \"expected_result\": \"System displays validation error message indicating email is required and prevents login\",\n        \"id\": 6,\n        \"steps\": [\n            \"Navigate to login page\",\n            \"Leave email field empty\",\n            \"Enter valid password in password field\",\n            \"Click on login/submit button\"\n        ],\n        \"title\": \"Login attempt with empty email field\",\n        \"type\": \"boundary\"\n    },\n    {\n        \"expected_result\": \"System displays validation error message indicating password is required and prevents login\",\n        \"id\": 7,\n        \"steps\": [\n            \"Navigate to login page\",\n            \"Enter valid email address\",\n            \"Leave password field empty\",\n            \"Click on login/submit button\"\n        ],\n        \"title\": \"Login attempt with empty password field\",\n        \"type\": \"boundary\"\n    },\n    {\n        \"expected_result\": \"System prevents SQL injection attack, displays generic error message, and does not grant unauthorized access\",\n        \"id\": 8,\n        \"steps\": [\n            \"Navigate to login page\",\n            \"Enter SQL injection payload in email field (e.g., admin@example.com' OR '1'='1)\",\n            \"Enter any password\",\n            \"Click on login/submit button\"\n        ],\n        \"title\": \"Login attempt with SQL injection in email field\",\n        \"type\": \"negative\"\n    },\n    {\n        \"expected_result\": \"System handles special characters safely without executing scripts and displays appropriate error or prevents login\",\n        \"id\": 9,\n        \"steps\": [\n            \"Navigate to login page\",\n            \"Enter valid email address\",\n            \"Enter password containing special characters (e.g., <script>alert('xss')</script>)\",\n            \"Click on login/submit button\"\n        ],\n        \"title\": \"Login attempt with special characters in password\",\n        \"type\": \"negative\"\n    },\n    {\n        \"expected_result\": \"User is successfully authenticated and redirected to their account dashboard\",\n        \"id\": 10,\n        \"steps\": [\n            \"Navigate to login page\",\n            \"Enter valid email address in email field\",\n            \"Enter correct password in password field\",\n            \"Click on login button\"\n        ],\n        \"title\": \"Valid user login with correct credentials\",\n        \"type\": \"positive\"\n    },\n    {\n        \"expected_result\": \"System displays error message indicating invalid email format and prevents login\",\n        \"id\": 11,\n        \"steps\": [\n            \"Navigate to login page\",\n            \"Enter email address without '@' symbol (e.g., 'testexample.com')\",\n            \"Enter valid password in password field\",\n            \"Click on login button\"\n        ],\n        \"title\": \"Login attempt with invalid email format\",\n        \"type\": \"negative\"\n    },\n    {\n        \"expected_result\": \"System rejects the input and displays generic error message without exposing database information\",\n        \"id\": 12,\n        \"steps\": [\n            \"Navigate to login page\",\n            \"Enter valid email address\",\n            \"Enter SQL injection string in password field (e.g., \\\"' OR '1'='1\\\")\",\n            \"Click on login button\"\n        ],\n        \"title\": \"Login attempt with SQL injection in password field\",\n        \"type\": \"negative\"\n    },\n    {\n        \"expected_result\": \"System displays validation error indicating both fields are required\",\n        \"id\": 13,\n        \"steps\": [\n            \"Navigate to login page\",\n            \"Leave email field empty\",\n            \"Leave password field empty\",\n            \"Click on login button\"\n        ],\n        \"title\": \"Login attempt with empty email and password fields\",\n        \"type\": \"boundary\"\n    },\n    {\n        \"expected_result\": \"System displays error message indicating invalid credentials\",\n        \"id\": 14,\n        \"steps\": [\n            \"Navigate to login page\",\n            \"Enter email address that does not exist in system (e.g., 'nonexistent@example.com')\",\n            \"Enter any password in password field\",\n            \"Click on login button\"\n        ],\n        \"title\": \"Login attempt with non-existent email address\",\n        \"type\": \"negative\"\n    },\n    {\n        \"expected_result\": \"System displays error message indicating invalid credentials\",\n        \"id\": 15,\n        \"steps\": [\n            \"Navigate to login page\",\n            \"Enter valid registered email address\",\n            \"Enter incorrect password (wrong combination of characters)\",\n            \"Click on login button\"\n        ],\n        \"title\": \"Login attempt with incorrect password\",\n        \"type\": \"negative\"\n    },\n    {\n        \"expected_result\": \"System accepts the input and processes the login request appropriately\",\n        \"id\": 16,\n        \"steps\": [\n            \"Navigate to login page\",\n            \"Enter email address at maximum allowed length (e.g., 254 characters)\",\n            \"Enter password at maximum allowed length\",\n            \"Click on login button\"\n        ],\n        \"title\": \"Login attempt with maximum length email and password\",\n        \"type\": \"boundary\"\n    },\n    {\n        \"expected_result\": \"System sanitizes input and does not execute or render any scripts, displaying appropriate error if invalid\",\n        \"id\": 17,\n        \"steps\": [\n            \"Navigate to login page\",\n            \"Enter valid email address\",\n            \"Enter password containing special characters and symbols (e.g., '<script>alert(1)</script>')\",\n            \"Click on login button\"\n        ],\n        \"title\": \"Login attempt with special characters in password\",\n        \"type\": \"negative\"\n    }\n]"
+            }
+          ]
+        },
+        {
+          "name": "Delete Testcases By Requirement",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{gatewayBaseUrl}}/testcasegenerator/requirements/api/1/testcases",
+              "host": [
+                "{{gatewayBaseUrl}}"
+              ],
+              "path": [
+                "testcasegenerator",
+                "requirements",
+                "api",
+                "1",
+                "testcases"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Delete Testcases By Requirement",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{gatewayBaseUrl}}/testcasegenerator/requirements/api/{{requirementId}}/testcases",
+                  "host": [
+                    "{{gatewayBaseUrl}}"
+                  ],
+                  "path": [
+                    "testcasegenerator",
+                    "requirements",
+                    "api",
+                    "{{requirementId}}",
+                    "testcases"
+                  ]
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "transfer-encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Method"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Headers"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "9"
+                },
+                {
+                  "key": "X-RateLimit-Requested-Tokens",
+                  "value": "1"
+                },
+                {
+                  "key": "X-RateLimit-Burst-Capacity",
+                  "value": "10"
+                },
+                {
+                  "key": "X-RateLimit-Replenish-Rate",
+                  "value": "5"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 26 May 2026 12:46:11 GMT"
+                },
+                {
+                  "key": "X-Response-Time",
+                  "value": "2026-05-26T12:34:46.003931172"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"apiPath\": \"/api/2/testcases\",\n    \"errorCode\": \"404 NOT_FOUND\",\n    \"errorMessage\": \"Requirement not found\",\n    \"errorTime\": \"2026-05-26T12:46:11.442809585\"\n}"
+            },
+            {
+              "name": "Delete Testcases By Requirement",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "{{gatewayBaseUrl}}/testcasegenerator/requirements/api/1/testcases",
+                  "host": [
+                    "{{gatewayBaseUrl}}"
+                  ],
+                  "path": [
+                    "testcasegenerator",
+                    "requirements",
+                    "api",
+                    "1",
+                    "testcases"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "transfer-encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Method"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Headers"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "9"
+                },
+                {
+                  "key": "X-RateLimit-Requested-Tokens",
+                  "value": "1"
+                },
+                {
+                  "key": "X-RateLimit-Burst-Capacity",
+                  "value": "10"
+                },
+                {
+                  "key": "X-RateLimit-Replenish-Rate",
+                  "value": "5"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Date",
+                  "value": "Tue, 26 May 2026 12:46:22 GMT"
+                },
+                {
+                  "key": "X-Response-Time",
+                  "value": "2026-05-26T12:34:46.003931172"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"statusCode\": \"200\",\n    \"statusMsg\": \"Request processed successfully\"\n}"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "eyJhbGciOiJIUzM4NCJ9.eyJyb2xlIjoiQ1VTVE9NRVIiLCJ1c2VySWQiOjEsImVtYWlsIjoiN2FtZGlzaGVoYWJAZ21haWwuY29tIiwic3ViIjoiN2FtZGlzaGVoYWJAZ21haWwuY29tIiwiaWF0IjoxNzc5Nzk5MDI2LCJleHAiOjE3Nzk3OTk2MjZ9.itbDnbp_2AFjkk9eP651bqpvh7AZmnA-SrApG7Qlsu-6R21gXHmYYkbwR5YXFhAV",
+        "type": "string"
+      }
+    ]
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "gatewayBaseUrl",
+      "value": "http://localhost:8072"
+    },
+    {
+      "key": "token",
+      "value": ""
+    },
+    {
+      "key": "email",
+      "value": "user@example.com"
+    },
+    {
+      "key": "password",
+      "value": "password1234"
+    },
+    {
+      "key": "projectId",
+      "value": "1"
+    },
+    {
+      "key": "requirementId",
+      "value": "1"
+    },
+    {
+      "key": "keyword",
+      "value": "Ecommerce"
+    },
+    {
+      "key": "userId",
+      "value": ""
+    }
+  ]
+}

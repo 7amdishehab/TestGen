@@ -6,7 +6,9 @@ export const ROUTES = {
 
     home: '/',
     dashboard: '/dashboard',
+    projects: '/projects',
     export: '/export',
+    userProfile: '/user-profile',
     settings: '/settings',
     howItWorks: '/how-it-works',
     uploadRequirements: '/upload-requirements',

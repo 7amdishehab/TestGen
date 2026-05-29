@@ -1,7 +1,7 @@
 import { FiLayers } from 'react-icons/fi'
 import { FaArrowRightLong, FaRegFileLines } from 'react-icons/fa6'
 import { GiProcessor } from 'react-icons/gi'
-import { IoCloudUploadOutline, IoLinkSharp } from 'react-icons/io5'
+import { IoCloudUploadOutline } from 'react-icons/io5'
 import { LuBrain, LuDownload } from 'react-icons/lu'
 import { ROUTES } from '../../../constants/routes'
 import { Button } from '../components/Button'
@@ -93,7 +93,7 @@ export function HowItWorksPage() {
                                 <WorkflowStepCard
                                     stepLabel="STEP 01"
                                     title="Upload Requirements"
-                                    description="Upload your PRD, user stories, or Jira tickets. We support PDF, DOCX, and raw text formats."
+                                    description="Upload your PRD, user stories, or raw requirement text. We support PDF, DOCX, and raw text formats."
                                 />
                                 <WorkflowStepCard
                                     stepLabel="STEP 02"
@@ -146,7 +146,7 @@ export function HowItWorksPage() {
                     <FeatureCard
                         icon={<RxCode size={20} />}
                         title="Instant Export"
-                        description="Export generated cases directly to Excel, CSV, or push to Jira/Azure DevOps."
+                        description="Export generated cases directly to Excel or CSV for review and execution."
                     />
                 </div>
             </SectionWrapper>

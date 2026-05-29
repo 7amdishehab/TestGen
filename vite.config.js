@@ -5,4 +5,12 @@ import tailwindcss from '@tailwindcss/vite'
 // https://vite.dev/config/
 export default defineConfig({
     plugins: [react(), tailwindcss()],
+    server: {
+        proxy: {
+            '/testcasegenerator': {
+                target: 'http://localhost:8072',
+                changeOrigin: true,
+            },
+        },
+    },
 })

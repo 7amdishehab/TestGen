@@ -1,0 +1,33 @@
+name: Lighthouse CI
+
+on:
+    workflow_dispatch:
+    push:
+        branches: [main]
+
+jobs:
+    lighthouse:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+
+            - name: Use Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: '18'
+
+            - name: Install dependencies
+              run: npm ci
+
+            - name: Start dev server
+              run: npx vite --port 5173 &
+
+            - name: Wait for server
+              run: npx wait-on http://localhost:5173
+
+            - name: Run Lighthouse (Headless)
+              uses: treosh/lighthouse-ci-action@v9
+              with:
+                  urls: http://localhost:5173
+                  configPath: ''
+                  upload: false

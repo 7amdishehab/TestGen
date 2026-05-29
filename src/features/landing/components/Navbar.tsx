@@ -1,21 +1,38 @@
 import { Link, NavLink } from 'react-router-dom'
 import { useState } from 'react'
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
+import { revealVariants, defaultTransition } from '../../../lib/motionVariants'
 import { ROUTES } from '../../../constants/routes'
 import { Button } from './Button'
 import { Container } from './Container'
 import Logo from './Logo'
+import { useAuth } from '../../../hooks/useAuth'
 import { LuMenu, LuX } from 'react-icons/lu'
 
 export function Navbar() {
     const [mobileOpen, setMobileOpen] = useState(false)
     const shouldReduceMotion = useReducedMotion()
+    const { user, logout } = useAuth()
+    const [isLoggingOut, setIsLoggingOut] = useState(false)
+    const authLabel = user?.email ? `Welcome, ${user.email}` : 'Login'
+
+    async function handleLogout() {
+        if (isLoggingOut) return
+
+        setIsLoggingOut(true)
+        try {
+            await logout()
+        } finally {
+            setIsLoggingOut(false)
+        }
+    }
 
     return (
         <motion.header
-            initial={shouldReduceMotion ? undefined : { y: -12, opacity: 0 }}
-            animate={shouldReduceMotion ? undefined : { y: 0, opacity: 1 }}
-            transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+            variants={revealVariants}
+            initial={shouldReduceMotion ? undefined : 'initial'}
+            animate={shouldReduceMotion ? undefined : 'animate'}
+            transition={{ ...defaultTransition, duration: 0.45 }}
             className="fixed inset-x-0 top-0 z-50 border-b border-(--landing-border) bg-(--landing-navbar-bg) backdrop-blur"
         >
             <Container className="flex h-16 items-center justify-between gap-6">
@@ -63,12 +80,25 @@ export function Navbar() {
                 </nav>
 
                 <div className="flex items-center gap-4">
-                    <Link
-                        to={ROUTES.signIn}
-                        className="ho ver:text-(--landing-text) hidden text-(--landing-muted) md:block"
-                    >
-                        Login
-                    </Link>
+                    {user ? (
+                        <button
+                            type="button"
+                            className="hidden max-w-[180px] truncate text-(--landing-muted) transition-colors hover:text-(--landing-text) md:block"
+                            onClick={() => void handleLogout()}
+                            disabled={isLoggingOut}
+                            aria-label={`Logout ${user.email}`}
+                            title="Click to logout"
+                        >
+                            {authLabel}
+                        </button>
+                    ) : (
+                        <Link
+                            to={ROUTES.signIn}
+                            className="hidden text-(--landing-muted) hover:text-(--landing-text) md:block"
+                        >
+                            Login
+                        </Link>
+                    )}
                     <Button
                         as="link"
                         to={ROUTES.signUp}
@@ -96,22 +126,15 @@ export function Navbar() {
             <AnimatePresence>
                 {mobileOpen ? (
                     <motion.div
-                        initial={
-                            shouldReduceMotion
-                                ? undefined
-                                : { opacity: 0, height: 0 }
-                        }
-                        animate={
-                            shouldReduceMotion
-                                ? undefined
-                                : { opacity: 1, height: 'auto' }
-                        }
-                        exit={
-                            shouldReduceMotion
-                                ? undefined
-                                : { opacity: 0, height: 0 }
-                        }
-                        transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+                        variants={revealVariants}
+                        initial={shouldReduceMotion ? undefined : 'initial'}
+                        animate={shouldReduceMotion ? undefined : 'animate'}
+                        exit={shouldReduceMotion ? undefined : 'initial'}
+                        transition={{
+                            ...defaultTransition,
+                            duration: 0.3,
+                            delay: 0,
+                        }}
                         className="border-t border-(--landing-border) bg-(--landing-navbar-bg) backdrop-blur md:hidden"
                     >
                         <Container className="flex flex-col gap-4 py-4">
@@ -152,16 +175,29 @@ export function Navbar() {
                                 </NavLink>
                             </nav>
 
-                            <div className="flex items-center gap-3">
-                                <Button
-                                    as="link"
-                                    to={ROUTES.signIn}
-                                    variant="secondary"
-                                    size="sm"
-                                    className="flex-1"
-                                >
-                                    Login
-                                </Button>
+                            <div className="flex flex-col gap-3">
+                                {user ? (
+                                    <button
+                                        type="button"
+                                        className="flex-1 rounded-[10px] border border-(--landing-border) bg-(--landing-card) px-3 py-2 text-center text-sm text-(--landing-muted) transition-colors hover:text-(--landing-text)"
+                                        onClick={() => void handleLogout()}
+                                        disabled={isLoggingOut}
+                                        aria-label={`Logout ${user.email}`}
+                                        title="Click to logout"
+                                    >
+                                        {authLabel}
+                                    </button>
+                                ) : (
+                                    <Button
+                                        as="link"
+                                        to={ROUTES.signIn}
+                                        variant="secondary"
+                                        size="sm"
+                                        className="flex-1"
+                                    >
+                                        Login
+                                    </Button>
+                                )}
                                 <Button
                                     as="link"
                                     to={ROUTES.signUp}

@@ -3,19 +3,14 @@ import { AppBadge } from '../../shared/components/AppBadge'
 import { DataTable } from '../../shared/components/DataTable'
 import { IconButton } from '../../shared/components/IconButton'
 import { PageHeader } from '../../shared/components/PageHeader'
-import { ToggleSwitch } from '../../shared/components/ToggleSwitch'
-import { Badge } from '../../../landing/components/Badge'
 import { Button } from '../../../landing/components/Button'
 import { LuBookOpen, LuFileDown, LuRotateCcw } from 'react-icons/lu'
-import { FaJira } from 'react-icons/fa'
 import { FiFileText } from 'react-icons/fi'
 import { RiFileExcel2Line } from 'react-icons/ri'
-import { useState } from 'react'
-import { VscAzure } from 'react-icons/vsc'
 
 type RecentActivityRow = {
     id: string
-    format: 'Excel' | 'PDF' | 'Jira'
+    format: 'Excel' | 'PDF'
     context: string
     requestedBy: string
     date: string
@@ -42,15 +37,6 @@ const activity: RecentActivityRow[] = [
         status: 'Completed',
         action: 'Download Again',
     },
-    {
-        id: '3',
-        format: 'Jira',
-        context: 'Sync Batch #402',
-        requestedBy: 'System Automation',
-        date: 'Oct 23, 2023, 09:00 AM',
-        status: 'Failed',
-        action: 'Retry',
-    },
 ]
 
 function FormatIcon({ format }: { format: RecentActivityRow['format'] }) {
@@ -68,12 +54,10 @@ function FormatIcon({ format }: { format: RecentActivityRow['format'] }) {
             <FiFileText size={16} className="text-red-400" aria-hidden="true" />
         )
     }
-    return <FaJira size={16} className="text-blue-400" aria-hidden="true" />
+    return null
 }
 
 export function ExportPage() {
-    const [jiraConnected, setJiraConnected] = useState(true)
-
     return (
         <div className="flex flex-col gap-8">
             <PageHeader
@@ -151,85 +135,6 @@ export function ExportPage() {
                             >
                                 Generate PDF
                             </Button>
-                        </div>
-                    </AppCard>
-                </div>
-            </section>
-
-            <section className="flex flex-col gap-4">
-                <h2 className="text-sm font-semibold text-(--landing-text)">
-                    Third-Party Integrations
-                </h2>
-                <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-                    <AppCard className="flex flex-col justify-between gap-8">
-                        <div className="flex items-start justify-between gap-6">
-                            <div className="flex min-w-0 flex-col gap-4">
-                                <div className="flex h-11 w-11 items-center justify-center rounded-[12px] border border-(--landing-border) bg-white text-blue-600">
-                                    <FaJira size={20} aria-hidden="true" />
-                                </div>
-
-                                <div className="min-w-0">
-                                    <div className="text-sm font-semibold text-(--landing-text)">
-                                        Atlassian Jira
-                                    </div>
-                                    <p className="mt-2 text-xs leading-relaxed text-(--landing-muted)">
-                                        Sync generated test cases directly to
-                                        Jira projects as tickets. Supports
-                                        custom fields mapping.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <Badge className="border-cyan-400/25 bg-cyan-400/10 px-3 py-1 text-[11px] font-semibold text-cyan-300 [&>span]:hidden">
-                                Connected
-                            </Badge>
-                        </div>
-
-                        <div className="flex items-center justify-between">
-                            <button
-                                type="button"
-                                className="text-xs text-(--landing-subtle) underline-offset-4 hover:text-(--landing-text) hover:underline"
-                            >
-                                Configure Settings
-                            </button>
-                            <ToggleSwitch
-                                checked={jiraConnected}
-                                onChange={setJiraConnected}
-                            />
-                        </div>
-                    </AppCard>
-
-                    <AppCard className="flex flex-col justify-between gap-8">
-                        <div className="flex items-start justify-between gap-6">
-                            <div className="flex min-w-0 flex-col gap-4">
-                                <div className="flex h-11 w-11 items-center justify-center rounded-[12px] border border-(--landing-border) bg-white">
-                                    <span
-                                        className="text-sm font-bold text-blue-600"
-                                        aria-hidden="true"
-                                    >
-                                        <VscAzure size={20} />
-                                    </span>
-                                </div>
-
-                                <div className="min-w-0">
-                                    <div className="text-sm font-semibold text-(--landing-text)">
-                                        Azure DevOps
-                                    </div>
-                                    <p className="mt-2 text-xs leading-relaxed text-(--landing-muted)">
-                                        Push test plans to Azure Boards and link
-                                        with work items. Enable bi-directional
-                                        status syncing.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <Badge className="min-w-fit border-(--landing-border) bg-(--landing-background)/20 px-3 py-1 text-[11px] font-semibold text-(--landing-subtle) [&>span]:hidden">
-                                Not Connected
-                            </Badge>
-                        </div>
-
-                        <div className="flex justify-end">
-                            <Button size="sm">Connect Account</Button>
                         </div>
                     </AppCard>
                 </div>

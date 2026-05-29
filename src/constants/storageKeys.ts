@@ -1,3 +1,3 @@
 export const STORAGE_KEYS = {
-  authToken: "testgen_auth_token",
-} as const;
+    authToken: 'testgen_token',
+} as const

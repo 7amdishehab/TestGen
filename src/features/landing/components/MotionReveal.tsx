@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
+import { defaultTransition } from '../../../lib/motionVariants'
 import { cn } from '../../../utils/cn'
 
 type MotionRevealProps = {
@@ -23,17 +24,19 @@ export function MotionReveal({
         return <div className={className}>{children}</div>
     }
 
+    const localVariants = {
+        initial: { opacity: 0, y },
+        animate: { opacity: 1, y: 0 },
+    }
+
     return (
         <motion.div
             className={cn(className)}
-            initial={{ opacity: 0, y }}
-            whileInView={{ opacity: 1, y: 0 }}
+            variants={localVariants}
+            initial="initial"
+            whileInView="animate"
             viewport={{ once, amount: 0.2 }}
-            transition={{
-                duration: 0.55,
-                delay,
-                ease: [0.22, 1, 0.36, 1],
-            }}
+            transition={{ ...defaultTransition, delay }}
         >
             {children}
         </motion.div>

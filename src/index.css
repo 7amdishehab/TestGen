@@ -47,6 +47,41 @@
         -moz-osx-font-smoothing: grayscale;
         text-rendering: optimizeLegibility;
     }
+
+    /* Smooth scrolling for anchor navigation; respect reduced-motion */
+    html {
+        scroll-behavior: smooth;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        html {
+            scroll-behavior: auto;
+        }
+    }
+}
+
+/* Skip-link styles: visually hidden but visible on keyboard focus */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+.skip-link:focus,
+.skip-link:not(.sr-only):focus {
+    position: static;
+    left: 0;
+    top: 0;
+    width: auto;
+    height: auto;
+    padding: 8px 12px;
+    background: var(--landing-card);
+    color: var(--landing-text);
+    border-radius: 6px;
+    z-index: 9999;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 @layer utilities {

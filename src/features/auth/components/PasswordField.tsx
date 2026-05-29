@@ -1,15 +1,12 @@
 import { useState } from 'react'
 import { FiEye, FiEyeOff, FiLock } from 'react-icons/fi'
-import type { ReactNode } from 'react'
+import type { ComponentPropsWithoutRef, ReactNode } from 'react'
 import { InputField } from './InputField'
 
-type PasswordFieldProps = {
+type PasswordFieldProps = Omit<ComponentPropsWithoutRef<'input'>, 'size' | 'type'> & {
     id: string
     name: string
     label: string
-    placeholder?: string
-    autoComplete?: string
-    required?: boolean
     labelRight?: ReactNode
 }
 
@@ -21,6 +18,7 @@ export function PasswordField({
     autoComplete,
     required,
     labelRight,
+    ...props
 }: PasswordFieldProps) {
     const [showPassword, setShowPassword] = useState(false)
 
@@ -35,6 +33,7 @@ export function PasswordField({
             placeholder={placeholder}
             required={required}
             icon={<FiLock size={18} />}
+            {...props}
             rightSlot={
                 <button
                     type="button"

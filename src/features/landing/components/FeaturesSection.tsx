@@ -2,7 +2,7 @@ import { FiLayers } from 'react-icons/fi'
 import { FeatureCard } from './FeatureCard'
 import { SectionWrapper } from './SectionWrapper'
 import { LuBrain } from 'react-icons/lu'
-import { IoLinkSharp } from 'react-icons/io5'
+import { LuFolderKanban } from 'react-icons/lu'
 
 export function FeaturesSection() {
     return (
@@ -23,9 +23,9 @@ export function FeaturesSection() {
                     description="Export from PDF, Word, Excel, or plain text. Seamlessly convert any document format into structured test cases."
                 />
                 <FeatureCard
-                    icon={<IoLinkSharp size={20} />}
-                    title="Jira Integration"
-                    description="Seamlessly export generated test cases to Jira, create tickets in any project, and sync status in real-time."
+                    icon={<LuFolderKanban size={20} />}
+                    title="Project Workspaces"
+                    description="Organize generated test cases by project, requirement, and coverage type for a cleaner QA workflow."
                 />
             </div>
         </SectionWrapper>

@@ -6,7 +6,7 @@ export function MainLayout() {
     return (
         <div className="bg-(--landing-background) text-(--landing-text)">
             <Navbar />
-            <main>
+            <main id="main-content">
                 <Outlet />
             </main>
             <Footer />
