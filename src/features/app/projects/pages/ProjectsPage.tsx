@@ -1,5 +1,12 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
-import { LuBell, LuPencil, LuPlus, LuSearch, LuTrash2 } from 'react-icons/lu'
+import {
+    LuBell,
+    LuClipboardList,
+    LuPencil,
+    LuPlus,
+    LuSearch,
+    LuTrash2,
+} from 'react-icons/lu'
 import { useNavigate } from 'react-router-dom'
 import { AppCard } from '../../shared/components/AppCard'
 import { IconButton } from '../../shared/components/IconButton'
@@ -10,6 +17,7 @@ import { Toast } from '../../../../components/ui/Toast'
 import { ROUTES } from '../../../../constants/routes'
 import { projectsApi } from '../../../../lib/apiClient'
 import type { Project } from '../../../../types'
+import { EmptyState } from '../../shared/components/EmptyState'
 
 type ProjectForm = {
     name: string
@@ -285,9 +293,19 @@ export function ProjectsPage() {
                                 ))}
                             </div>
                         ) : projects.length === 0 ? (
-                            <p className="rounded-[12px] border border-(--landing-border) bg-(--landing-background)/20 p-4 text-sm text-(--landing-muted)">
-                                No projects found.
-                            </p>
+                            <EmptyState
+                                icon={<LuClipboardList size={18} aria-hidden="true" />}
+                                title={
+                                    search.trim()
+                                        ? 'No matching projects'
+                                        : 'No projects yet'
+                                }
+                                description={
+                                    search.trim()
+                                        ? 'Try a different search term or clear the search field to see all projects.'
+                                        : 'Create your first project to start organizing requirements and generating test cases.'
+                                }
+                            />
                         ) : (
                             <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                                 {projects.map((project) => (

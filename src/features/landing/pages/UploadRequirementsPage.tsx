@@ -10,7 +10,7 @@ import { FaFileExcel, FaFilePdf } from 'react-icons/fa'
 import { FaRegFileWord } from 'react-icons/fa6'
 import { CiCircleAlert } from 'react-icons/ci'
 import { BsStars } from 'react-icons/bs'
-import { LuPencil, LuTrash2 } from 'react-icons/lu'
+import { LuClipboardList, LuPencil, LuTrash2 } from 'react-icons/lu'
 import { PageHeader } from '../../app/shared/components/PageHeader'
 import { AppCard } from '../../app/shared/components/AppCard'
 import { AppBadge } from '../../app/shared/components/AppBadge'
@@ -19,6 +19,7 @@ import { Toast } from '../../../components/ui/Toast'
 import { projectsApi, requirementsApi } from '../../../lib/apiClient'
 import { Skeleton } from '../../../components/ui/Skeleton'
 import type { Project, Requirement, SavedTestCase } from '../../../types'
+import { EmptyState } from '../../app/shared/components/EmptyState'
 
 type RequirementForm = {
     title: string
@@ -465,9 +466,16 @@ export function UploadRequirementsPage() {
                                     </div>
                                 </div>
                             ) : requirements.length === 0 ? (
-                                <p className="rounded-[12px] border border-(--landing-border) bg-(--landing-background)/20 p-4 text-sm text-(--landing-muted)">
-                                    No requirements found.
-                                </p>
+                                <EmptyState
+                                    icon={
+                                        <LuClipboardList
+                                            size={18}
+                                            aria-hidden="true"
+                                        />
+                                    }
+                                    title="No requirements yet"
+                                    description="Add a requirement to start generating test cases for this project."
+                                />
                             ) : (
                                 <div className="flex flex-col gap-3">
                                     {requirements.map((requirement) => (
@@ -554,9 +562,16 @@ export function UploadRequirementsPage() {
                             </div>
 
                             {!selectedRequirement ? (
-                                <p className="rounded-[12px] border border-(--landing-border) bg-(--landing-background)/20 p-4 text-sm text-(--landing-muted)">
-                                    Select a requirement to load test cases.
-                                </p>
+                                <EmptyState
+                                    icon={
+                                        <LuClipboardList
+                                            size={18}
+                                            aria-hidden="true"
+                                        />
+                                    }
+                                    title="No requirement selected"
+                                    description="Select a requirement from the list to load its saved test cases."
+                                />
                             ) : isLoading ? (
                                 <div className="grid grid-cols-1 gap-3">
                                     <div className="rounded-[12px] border border-(--landing-border) p-4">
@@ -573,9 +588,16 @@ export function UploadRequirementsPage() {
                                     </div>
                                 </div>
                             ) : testCases.length === 0 ? (
-                                <p className="rounded-[12px] border border-(--landing-border) bg-(--landing-background)/20 p-4 text-sm text-(--landing-muted)">
-                                    No saved test cases for this requirement.
-                                </p>
+                                <EmptyState
+                                    icon={
+                                        <LuClipboardList
+                                            size={18}
+                                            aria-hidden="true"
+                                        />
+                                    }
+                                    title="No test cases yet"
+                                    description="Generate test cases for this requirement to see them listed here."
+                                />
                             ) : (
                                 <div className="flex flex-col gap-4">
                                     {testCases.map((testCase) => (
